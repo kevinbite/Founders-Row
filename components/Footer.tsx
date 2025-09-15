@@ -26,9 +26,10 @@ const Footer = () => {
                 priority
               />
             </div>
-                <p className="text-white text-lg leading-relaxed max-w-2xl font-bold font-montserrat">
-                  Capital. Creativity. Execution. 100% Founder-Obsessed.
-                </p>
+                <div className="text-white text-base sm:text-lg leading-relaxed max-w-2xl font-bold font-montserrat text-center">
+                  <div>Capital. Creativity. Execution.</div>
+                  <div>100% Founder-Obsessed.</div>
+                </div>
           </div>
           
           {/* Navigation Links */}
