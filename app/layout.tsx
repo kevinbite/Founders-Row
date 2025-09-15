@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: 'Founders Row',
   description: 'A leading private equity firm focused on growth-stage investments and strategic partnerships.',
   keywords: 'private equity, investment, venture capital, growth capital, strategic partnerships',
+  icons: {
+    icon: '/icons/favicon.ico',
+  },
 }
 
 export default function RootLayout({
