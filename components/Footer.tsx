@@ -38,7 +38,7 @@ const Footer = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:underline text-lg font-medium font-cinzel"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:underline text-sm sm:text-lg font-medium font-cinzel"
                   aria-label={`Navigate to ${item.name}`}
                 >
                   {item.name}
