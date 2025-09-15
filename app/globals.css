@@ -27,4 +27,22 @@
     filter: grayscale(100%) contrast(100%) brightness(0) invert(1);
     background-color: transparent;
   }
+  
+  /* Prevent orphaned words and improve text flow on mobile */
+  .optimized-text {
+    orphans: 3;
+    widows: 3;
+    hyphens: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  @media (max-width: 640px) {
+    .optimized-text {
+      text-align: justify;
+      text-justify: inter-word;
+      word-spacing: 0.05em;
+      letter-spacing: 0.01em;
+    }
+  }
 }
