@@ -7,7 +7,7 @@ const cinzel = Cinzel({ subsets: ['latin'], variable: '--font-cinzel' })
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
 
 export const metadata: Metadata = {
-  title: 'Founders Row - Private Equity Excellence',
+  title: 'Founders Row',
   description: 'A leading private equity firm focused on growth-stage investments and strategic partnerships.',
   keywords: 'private equity, investment, venture capital, growth capital, strategic partnerships',
 }
