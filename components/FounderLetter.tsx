@@ -1,0 +1,106 @@
+import Image from 'next/image'
+
+const FounderLetter = () => {
+  return (
+    <section id="about" className="py-20 bg-black relative">
+      {/* Subtle texture overlay */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.02) 0%, transparent 50%),
+                           radial-gradient(circle at 75% 75%, rgba(255,255,255,0.02) 0%, transparent 50%),
+                           linear-gradient(45deg, rgba(255,255,255,0.01) 25%, transparent 25%),
+                           linear-gradient(-45deg, rgba(255,255,255,0.01) 25%, transparent 25%)`,
+          backgroundSize: '60px 60px, 80px 80px, 20px 20px, 20px 20px'
+        }}>
+        </div>
+      </div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Content - Founder Image and Info */}
+          <div className="space-y-8">
+            <div className="relative">
+              {/* Founder Photo */}
+              <div className="w-80 h-96 mx-auto relative overflow-hidden border-2 border-neutral-400">
+                <Image
+                  src="/images/Jamie-Weeks-732x1024.webp"
+                  alt="Jamie Weeks, Founder & Visionary"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+            
+            {/* Founder Info */}
+            <div className="text-center space-y-1">
+              <h3 className="text-2xl font-bold text-white font-cinzel">Jamie Weeks</h3>
+              <p className="text-neutral-400 font-medium italic font-cinzel">Founder & Visionary</p>
+            </div>
+          </div>
+
+          {/* Right Content - Letter */}
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <div className="h-1 w-12 bg-neutral-400"></div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-white font-serif">
+                  A Letter from Our Founder
+                </h2>
+              </div>
+              
+              <div className="prose prose-lg max-w-none">
+                <div className="space-y-6 text-neutral-300 leading-relaxed font-montserrat">
+                  <p className="text-xl font-bold text-white font-montserrat">
+                    This isn't another private equity firm. This is Founders Row.
+                  </p>
+                  
+                  <p>
+                    I'm just a regular guy who's gotten more wrong than right. I've stumbled, failed, and asked for forgiveness more times than I can count. But after 30 years of building, one truth has become undeniable to me: founders are — and always will be — the engine of capitalism.
+                  </p>
+                  
+                  <p>
+                    For years, private equity tried to change me to fit their box. I thought maybe that was the cost of playing the game. But the deeper I went, the clearer it became: I wasn't the problem. The system was the problem.
+                  </p>
+                  
+                  <p>
+                    The truth is, private equity was built to scale capital — not founders. It rewards fees, not obsession. And in that system, the founder's vision — the very thing that makes a business extraordinary — too often gets diluted or lost.
+                  </p>
+                  
+                  <p>
+                    This is why I started Founders Row. Not because I think I have it all figured out, but because I've lived enough of the founder's struggle to know what's missing. Money alone doesn't build brands. It takes empathy. It takes operators. It takes storytellers. It takes people willing to get in the trenches and build alongside you.
+                  </p>
+                  
+                  <p>
+                    At Founders Row, we back gritty, visionary founders who are willing to bet it all — and we bet it all with them. We keep it small, we keep it nimble, and we get our hands dirty in the earliest years when the support matters most. Because when founders win, everyone wins.
+                  </p>
+                  
+                  <p className="text-xl font-bold text-white font-montserrat">
+                    This is my mission. This is our obsession. Welcome to Founders Row.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Call to Action */}
+            <div className="pt-8 space-y-4">
+              <h4 className="text-xl font-semibold text-white font-cinzel">Ready to Share Your Founder Story?</h4>
+              <p className="text-neutral-300 leading-relaxed font-montserrat">
+                For a Zoom call with Jamie and the team to tell us your founder story, please email us at 
+                <a 
+                  href="mailto:founder@foundersrow.co" 
+                  className="text-white hover:text-gray-200 underline ml-1 font-medium font-montserrat"
+                  aria-label="Email us at founder@foundersrow.co"
+                >
+                  founder@foundersrow.co
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default FounderLetter
