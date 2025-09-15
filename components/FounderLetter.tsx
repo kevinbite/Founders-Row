@@ -88,16 +88,18 @@ const FounderLetter = () => {
             {/* Call to Action */}
             <div className="pt-8 space-y-4">
               <h4 className="text-lg sm:text-xl font-semibold text-white font-cinzel">Ready to Share Your Founder Story?</h4>
-              <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-montserrat">
-                For a Zoom call with Jamie and the team to tell us your founder story, please email us at 
+              <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-montserrat text-center">
+                We would love to hear your founder story. Email us at do a Zoom with Jamie and the team.
+              </p>
+              <div className="text-center">
                 <a 
                   href="mailto:founder@foundersrow.co" 
-                  className="text-white hover:text-gray-200 underline ml-1 font-medium font-montserrat"
+                  className="text-white hover:text-gray-200 underline font-medium font-montserrat"
                   aria-label="Email us at founder@foundersrow.co"
                 >
                   founder@foundersrow.co
                 </a>
-              </p>
+              </div>
             </div>
           </div>
         </div>
