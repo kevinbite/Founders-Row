@@ -15,38 +15,16 @@ const FounderLetter = () => {
         </div>
       </div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content - Founder Image and Info */}
-          <div className="space-y-8">
-            <div className="relative">
-              {/* Founder Photo */}
-              <div className="w-80 h-96 mx-auto relative overflow-hidden border-2 border-neutral-400">
-                <Image
-                  src="/images/Jamie-Weeks-732x1024.webp"
-                  alt="Jamie Weeks, Founder & Visionary"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
-            
-            {/* Founder Info */}
-            <div className="text-center space-y-1">
-              <h3 className="text-2xl font-bold text-white font-cinzel">Jamie Weeks</h3>
-              <p className="text-neutral-400 font-medium italic font-cinzel">Founder & Visionary</p>
-            </div>
-          </div>
-
-          {/* Right Content - Letter */}
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center text-center">
+          {/* Centered Letter Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="h-1 w-12 bg-neutral-400"></div>
+              <div className="flex flex-col items-center space-y-4">
                 <h2 className="text-3xl sm:text-4xl font-bold text-white font-serif">
                   A Letter from Our Founder
                 </h2>
+                <div className="h-1 w-24 bg-neutral-400"></div>
               </div>
               
               <div className="prose prose-lg max-w-none">
@@ -78,6 +56,30 @@ const FounderLetter = () => {
                   <p className="text-xl font-bold text-white font-montserrat">
                     This is my mission. This is our obsession. Welcome to Founders Row.
                   </p>
+                </div>
+                
+                {/* Founder Signature */}
+                <div className="pt-3 flex items-center justify-center space-x-4">
+                  {/* Signature Image */}
+                  <div className="relative bg-black p-2 rounded">
+                    <Image
+                      src="/images/ChatGPT Image Sep 15, 2025, 02_54_37 PM.png"
+                      alt="Jamie Weeks Signature"
+                      width={200}
+                      height={80}
+                      className="signature-white"
+                      style={{
+                        filter: 'brightness(0) invert(1)',
+                        mixBlendMode: 'normal'
+                      }}
+                      priority
+                    />
+                  </div>
+                  {/* Name and Title */}
+                  <div className="text-left space-y-1">
+                    <h3 className="text-2xl font-bold text-white font-cinzel">Jamie Weeks</h3>
+                    <p className="text-neutral-400 font-medium italic font-cinzel">Founder & Visionary</p>
+                  </div>
                 </div>
               </div>
             </div>
