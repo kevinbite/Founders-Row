@@ -89,7 +89,7 @@ const FounderLetter = () => {
             <div className="pt-8 space-y-4">
               <h4 className="text-base sm:text-xl font-semibold text-white font-cinzel">Ready to Share Your Founder Story?</h4>
               <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-montserrat text-center">
-                We would love to hear your founder story. Email us at do a Zoom with Jamie and the team.
+                We would love to hear your founder story. Email us to do a Zoom with Jamie and the team.
               </p>
               <div className="text-center">
                 <a 
