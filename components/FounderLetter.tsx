@@ -21,7 +21,7 @@ const FounderLetter = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="flex flex-col items-center space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-bold text-white font-serif">
+                <h2 className="text-2xl sm:text-4xl font-bold text-white font-serif">
                   A Letter from Our Founder
                 </h2>
                 <div className="h-1 w-24 bg-neutral-400"></div>
@@ -29,7 +29,7 @@ const FounderLetter = () => {
               
               <div className="prose prose-lg max-w-none">
                 <div className="space-y-6 text-neutral-300 leading-relaxed font-montserrat">
-                  <p className="text-xl font-bold text-white font-montserrat">
+                  <p className="text-lg sm:text-xl font-bold text-white font-montserrat">
                     This isn't another private equity firm. This is Founders Row.
                   </p>
                   
@@ -53,7 +53,7 @@ const FounderLetter = () => {
                     At Founders Row, we back gritty, visionary founders who are willing to bet it all — and we bet it all with them. We keep it small, we keep it nimble, and we get our hands dirty in the earliest years when the support matters most. Because when founders win, everyone wins.
                   </p>
                   
-                  <p className="text-xl font-bold text-white font-montserrat">
+                  <p className="text-lg sm:text-xl font-bold text-white font-montserrat">
                     This is my mission. This is our obsession. Welcome to Founders Row.
                   </p>
                 </div>
@@ -77,8 +77,8 @@ const FounderLetter = () => {
                   </div>
                   {/* Name and Title */}
                   <div className="text-center sm:text-left space-y-1">
-                    <h3 className="text-2xl font-bold text-white font-cinzel">Jamie Weeks</h3>
-                    <p className="text-neutral-400 font-medium italic font-cinzel">Founder & Visionary</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white font-cinzel">Jamie Weeks</h3>
+                    <p className="text-sm sm:text-base text-neutral-400 font-medium italic font-cinzel">Founder</p>
                   </div>
                 </div>
               </div>
@@ -86,8 +86,8 @@ const FounderLetter = () => {
             
             {/* Call to Action */}
             <div className="pt-8 space-y-4">
-              <h4 className="text-xl font-semibold text-white font-cinzel">Ready to Share Your Founder Story?</h4>
-              <p className="text-neutral-300 leading-relaxed font-montserrat">
+              <h4 className="text-lg sm:text-xl font-semibold text-white font-cinzel">Ready to Share Your Founder Story?</h4>
+              <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-montserrat">
                 For a Zoom call with Jamie and the team to tell us your founder story, please email us at 
                 <a 
                   href="mailto:founder@foundersrow.co" 
