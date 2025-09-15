@@ -29,9 +29,10 @@ const FounderLetter = () => {
               
               <div className="prose prose-lg max-w-none">
                 <div className="space-y-5 sm:space-y-6 text-neutral-300 font-montserrat">
-                  <p className="text-base sm:text-xl font-bold text-white font-montserrat leading-snug sm:leading-relaxed">
-                    This isn't another private equity firm. This is Founders Row.
-                  </p>
+                  <div className="text-base sm:text-xl font-bold text-white font-montserrat leading-snug sm:leading-relaxed text-center">
+                    <div>This isn't another private equity firm.</div>
+                    <div>This is Founders Row.</div>
+                  </div>
                   
                   <p className="text-sm sm:text-base leading-relaxed sm:leading-loose optimized-text">
                     I'm just a regular guy who's gotten more wrong than right. I've stumbled, failed, and asked for forgiveness more times than I can count. But after 30 years of building, one truth has become undeniable to me: founders are — and always will be — the engine of capitalism.
