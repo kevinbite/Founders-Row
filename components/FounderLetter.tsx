@@ -59,7 +59,7 @@ const FounderLetter = () => {
                 </div>
                 
                 {/* Founder Signature */}
-                <div className="pt-3 flex items-center justify-center space-x-4">
+                <div className="pt-3 flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
                   {/* Signature Image */}
                   <div className="relative bg-black p-2 rounded">
                     <Image
@@ -76,7 +76,7 @@ const FounderLetter = () => {
                     />
                   </div>
                   {/* Name and Title */}
-                  <div className="text-left space-y-1">
+                  <div className="text-center sm:text-left space-y-1">
                     <h3 className="text-2xl font-bold text-white font-cinzel">Jamie Weeks</h3>
                     <p className="text-neutral-400 font-medium italic font-cinzel">Founder & Visionary</p>
                   </div>
