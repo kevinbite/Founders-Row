@@ -21,7 +21,7 @@ const FounderLetter = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="flex flex-col items-center space-y-4">
-                <h2 className="text-2xl sm:text-4xl font-bold text-white font-serif">
+                <h2 className="text-lg sm:text-4xl font-bold text-white font-serif">
                   A Letter from Our Founder
                 </h2>
                 <div className="h-1 w-24 bg-neutral-400"></div>
