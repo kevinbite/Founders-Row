@@ -18,10 +18,10 @@ const Navigation = () => {
   }
 
   const navItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Advisory', href: '#advisory' },
-    { name: 'Partners', href: '#partners' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'About', href: '/about' },
+    { name: 'Advisory', href: '/advisory' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Contact', href: '/contact' },
   ]
 
   return (
@@ -31,7 +31,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a 
-              href="#home" 
+              href="/" 
               className="focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-transparent rounded-md"
               aria-label="Founders Row Home"
             >
