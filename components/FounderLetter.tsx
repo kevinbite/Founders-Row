@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const FounderLetter = () => {
   return (
-    <section id="about" className="py-8 sm:py-20 bg-blue-950 relative">
+    <section id="about" className="py-8 sm:py-20 bg-black relative">
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -61,8 +61,8 @@ const FounderLetter = () => {
                 
                 {/* Founder Signature */}
                 <div className="pt-3 flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
-                  {/* Signature Image */}
-                  <div className="relative bg-blue-950 p-2 rounded">
+                          {/* Signature Image */}
+                          <div className="relative bg-black p-2 rounded">
                     <Image
                       src="/images/ChatGPT Image Sep 15, 2025, 02_54_37 PM.png"
                       alt="Jamie Weeks Signature"

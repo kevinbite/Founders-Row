@@ -115,7 +115,7 @@ const Navigation = () => {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-950/90 backdrop-blur-sm border-t border-blue-800">
+                  <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/90 backdrop-blur-sm border-t border-gray-800">
             {navItems.map((item) => (
               <a
                 key={item.name}
