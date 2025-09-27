@@ -59,14 +59,14 @@ const AboutPage = () => {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="space-y-6">
-              <p className="text-base sm:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
+            <div className="space-y-6 text-center lg:text-left">
+              <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
                 We believe money alone doesn't build brands — it takes operators, storytellers, and a structure that keeps GP, LP, and Founders on the same side of the table.
               </p>
-              <p className="text-base sm:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
+              <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
                 Our approach combines the rigor of private equity with the insight of founder-led advisory and the reach of a modern creative studio. We're not just investors; we're partners in the truest sense.
               </p>
-              <p className="text-base sm:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
+              <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
                 Every founder we work with gets access to our full ecosystem: strategic capital, operational expertise, creative resources, and a network built specifically for scaling founder-led brands.
               </p>
             </div>
