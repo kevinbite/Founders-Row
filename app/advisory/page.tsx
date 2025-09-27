@@ -122,14 +122,14 @@ const AdvisoryPage = () => {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="space-y-6">
-              <p className="text-base sm:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
+            <div className="space-y-6 text-center lg:text-left">
+              <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
                 Advisory exists to give founders the structure, strategy, and creative execution they need in the early years — and serves as an incubator for brands that may ultimately graduate into FR Partners.
               </p>
-              <p className="text-base sm:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
+              <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
                 From opening new locations to raising capital to negotiating with private equity, we are your founder-first partner.
               </p>
-              <p className="text-base sm:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
+              <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
                 We provide deep operational partnerships that can be structured as either fee-based or equity-based engagements, tailored to your specific needs and stage.
               </p>
             </div>
