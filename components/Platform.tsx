@@ -67,7 +67,7 @@ const Platform = () => {
             
             <div className="text-neutral-300 font-montserrat leading-relaxed">
               <p className="text-xs sm:text-sm md:text-base balanced-text">
-                The creative arm of Founders Row. Built in partnership with House 17. We amplify founders and brands through influencer management, performance marketing, and brand storytelling.
+                The creative arm of Founders Row. We amplify founders and brands through influencer management, performance marketing, and brand storytelling.
               </p>
             </div>
           </div>
