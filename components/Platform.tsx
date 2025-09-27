@@ -1,6 +1,6 @@
 const Platform = () => {
   return (
-    <section className="py-20 bg-black relative">
+    <section className="py-8 sm:py-20 bg-black relative">
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
