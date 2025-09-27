@@ -21,7 +21,7 @@ const AboutPage = () => {
         <div className="absolute inset-0 bg-black/80"></div>
         
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white font-cinzel mb-8 leading-tight px-2">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white font-cinzel mb-8 leading-tight px-2">
             About Founders Row
           </h1>
           <div className="h-1 w-32 bg-neutral-400 mx-auto mb-12"></div>
