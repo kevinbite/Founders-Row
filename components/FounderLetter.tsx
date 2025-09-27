@@ -60,7 +60,7 @@ const FounderLetter = () => {
                         </div>
                 
                 {/* Founder Signature */}
-                <div className="pt-3 flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
+                <div className="pt-3 flex flex-col items-center justify-center space-y-1 sm:space-y-0 sm:flex-row sm:space-x-4">
                           {/* Signature Image */}
                           <div className="relative bg-black p-2 rounded">
                     <Image
