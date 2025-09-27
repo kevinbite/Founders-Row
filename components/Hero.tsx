@@ -8,7 +8,7 @@ const Hero = () => {
       style={{backgroundImage: "url('/images/atlanta-skyline-at-dusk.jpg')"}}
     >
       {/* Dark overlay for subtle background image */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
       
       {/* Centered Logo and Quote */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center space-y-8">

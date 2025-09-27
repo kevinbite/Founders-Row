@@ -28,36 +28,36 @@ const FounderLetter = () => {
               </div>
               
               <div className="prose prose-lg max-w-none">
-                <div className="space-y-5 sm:space-y-6 text-neutral-300 font-montserrat">
-                  <div className="text-base sm:text-xl font-bold text-white font-montserrat leading-snug sm:leading-relaxed text-center">
-                    <div>This isn't another private equity firm.</div>
-                    <div>This is Founders Row.</div>
-                  </div>
-                  
-                  <p className="text-sm sm:text-base leading-relaxed sm:leading-loose optimized-text">
-                    I'm just a regular guy who's gotten more wrong than right. I've stumbled, failed, and asked for forgiveness more times than I can count. But after 30 years of building, one truth has become undeniable to me: founders are — and always will be — the engine of capitalism.
-                  </p>
-                  
-                  <p className="text-sm sm:text-base leading-relaxed sm:leading-loose optimized-text">
-                    For years, private equity tried to change me to fit their box. I thought maybe that was the cost of playing the game. But the deeper I went, the clearer it became: I wasn't the problem. The system was the problem.
-                  </p>
-                  
-                  <p className="text-sm sm:text-base leading-relaxed sm:leading-loose optimized-text">
-                    The truth is, private equity was built to scale capital — not founders. It rewards fees, not obsession. And in that system, the founder's vision — the very thing that makes a business extraordinary — too often gets diluted or lost.
-                  </p>
-                  
-                  <p className="text-sm sm:text-base leading-relaxed sm:leading-loose optimized-text">
-                    This is why I started Founders Row. Not because I think I have it all figured out, but because I've lived enough of the founder's struggle to know what's missing. Money alone doesn't build brands. It takes empathy. It takes operators. It takes storytellers. It takes people willing to get in the trenches and build alongside you.
-                  </p>
-                  
-                  <p className="text-sm sm:text-base leading-relaxed sm:leading-loose optimized-text">
-                    At Founders Row, we back gritty, visionary founders who are willing to bet it all — and we bet it all with them. We keep it small, we keep it nimble, and we get our hands dirty in the earliest years when the support matters most. Because when founders win, everyone wins.
-                  </p>
-                  
-                  <p className="text-base sm:text-xl font-bold text-white font-montserrat leading-snug sm:leading-relaxed">
-                    This is my mission. This is our obsession. Welcome to Founders Row.
-                  </p>
-                </div>
+                        <div className="space-y-5 sm:space-y-6 text-neutral-300 font-montserrat">
+                          <div className="text-base sm:text-xl font-bold text-white font-montserrat leading-snug sm:leading-relaxed text-center">
+                            <div>This isn't another private equity firm.</div>
+                            <div>This is Founders Row.</div>
+                          </div>
+                          
+                          <p className="text-sm sm:text-base leading-relaxed sm:leading-loose balanced-text">
+                            I'm just a regular guy who's gotten more wrong than right. I've stumbled, failed, and asked for forgiveness more times than I can count. But after 30 years of building, one truth has become undeniable to me: founders are — and always will be — the engine of capitalism.
+                          </p>
+                          
+                          <p className="text-sm sm:text-base leading-relaxed sm:leading-loose balanced-text">
+                            For years, private equity tried to change me to fit their box. I thought maybe that was the cost of playing the game. But the deeper I went, the clearer it became: I wasn't the problem. The system was the problem.
+                          </p>
+                          
+                          <p className="text-sm sm:text-base leading-relaxed sm:leading-loose balanced-text">
+                            The truth is, private equity was built to scale capital — not founders. It rewards fees, not obsession. And in that system, the founder's vision — the very thing that makes a business extraordinary — too often gets diluted or lost.
+                          </p>
+                          
+                          <p className="text-sm sm:text-base leading-relaxed sm:leading-loose balanced-text">
+                            This is why I started Founders Row. Not because I think I have it all figured out, but because I've lived enough of the founder's struggle to know what's missing. Money alone doesn't build brands. It takes empathy. It takes operators. It takes storytellers. It takes people willing to get in the trenches and build alongside you.
+                          </p>
+                          
+                          <p className="text-sm sm:text-base leading-relaxed sm:leading-loose balanced-text">
+                            At Founders Row, we back gritty, visionary founders who are willing to bet it all — and we bet it all with them. We keep it small, we keep it nimble, and we get our hands dirty in the earliest years when the support matters most. Because when founders win, everyone wins.
+                          </p>
+                          
+                          <p className="text-base sm:text-xl font-bold text-white font-montserrat leading-snug sm:leading-relaxed balanced-text">
+                            This is my mission. This is our obsession. Welcome to Founders Row.
+                          </p>
+                        </div>
                 
                 {/* Founder Signature */}
                 <div className="pt-3 flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
@@ -88,9 +88,9 @@ const FounderLetter = () => {
             {/* Call to Action */}
             <div className="pt-8 space-y-4">
               <h4 className="text-base sm:text-xl font-semibold text-white font-cinzel">Ready to Share Your Founder Story?</h4>
-              <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-montserrat text-center">
-                We would love to hear your founder story. Email us to do a Zoom with Jamie and the team.
-              </p>
+                      <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-montserrat text-center balanced-text">
+                        We would love to hear your founder story. Email us to do a Zoom with Jamie and the team.
+                      </p>
               <div className="text-center">
                 <a 
                   href="mailto:founder@foundersrow.co" 
