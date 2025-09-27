@@ -35,7 +35,7 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-16 sm:py-20 bg-black relative">
+      <section className="pt-8 pb-16 sm:py-20 bg-black relative">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.02) 0%, transparent 50%),
