@@ -22,7 +22,7 @@ const PartnersPage = () => {
         <div className="absolute inset-0 bg-black/80"></div>
         
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-4 sm:mb-8">
             <Image
               src="/logos/FR Partners Logo.png?v=2"
               alt="FR Partners Logo"
