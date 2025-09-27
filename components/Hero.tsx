@@ -7,8 +7,8 @@ const Hero = () => {
       className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
       style={{backgroundImage: "url('/images/atlanta-skyline-at-dusk.jpg')"}}
     >
-      {/* Dark overlay for subtle background image */}
-      <div className="absolute inset-0 bg-black/70"></div>
+      {/* Dark blue overlay for subtle background image */}
+      <div className="absolute inset-0 bg-blue-950/80"></div>
       
       {/* Centered Logo and Quote */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center space-y-8">

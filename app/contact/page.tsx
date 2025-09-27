@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen bg-black flex flex-col">
+    <div className="min-h-screen bg-blue-950 flex flex-col">
       <Navigation />
       
       {/* Main Content - Centered */}
