@@ -59,7 +59,7 @@ const Platform = () => {
           {/* Founders Row Media */}
           <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-700 rounded-lg p-6 sm:p-8 text-center hover:bg-neutral-800/50 transition-all duration-300">
             <div className="mb-4 sm:mb-6">
-              <h3 className="text-sm sm:text-xl md:text-2xl font-bold text-white font-cinzel mb-3 sm:mb-4 px-2">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white font-cinzel mb-3 sm:mb-4 px-2">
                 Founders Row Media
               </h3>
               <div className="h-0.5 w-16 bg-neutral-400 mx-auto"></div>
