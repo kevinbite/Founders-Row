@@ -80,26 +80,26 @@ const ContactPage = () => {
             </div>
 
             {/* Right Side Content */}
-            <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-700 rounded-lg p-8 text-center">
-              <h3 className="text-2xl sm:text-3xl font-bold text-white font-cinzel mb-6">
+            <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-700 rounded-lg p-6 sm:p-8 text-center">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white font-cinzel mb-4 sm:mb-6">
                 Our Services
               </h3>
-              <div className="space-y-4 text-left">
+              <div className="space-y-3 sm:space-y-4 text-center lg:text-left">
                 <div>
-                  <h4 className="font-semibold text-white font-cinzel mb-2">FR Advisory</h4>
-                  <p className="text-neutral-300 font-montserrat text-sm balanced-text">
+                  <h4 className="font-semibold text-white font-cinzel mb-1 sm:mb-2 text-sm sm:text-base">FR Advisory</h4>
+                  <p className="text-neutral-300 font-montserrat text-xs sm:text-sm balanced-text">
                     Operational partnerships for structure, strategy, and creative execution in the early years.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white font-cinzel mb-2">FR Partners</h4>
-                  <p className="text-neutral-300 font-montserrat text-sm balanced-text">
+                  <h4 className="font-semibold text-white font-cinzel mb-1 sm:mb-2 text-sm sm:text-base">FR Partners</h4>
+                  <p className="text-neutral-300 font-montserrat text-xs sm:text-sm balanced-text">
                     Investment partnerships with carry-only structure and hands-on support for scaling.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white font-cinzel mb-2">FR Media</h4>
-                  <p className="text-neutral-300 font-montserrat text-sm balanced-text">
+                  <h4 className="font-semibold text-white font-cinzel mb-1 sm:mb-2 text-sm sm:text-base">FR Media</h4>
+                  <p className="text-neutral-300 font-montserrat text-xs sm:text-sm balanced-text">
                     Creative partnerships for brand amplification through performance marketing and storytelling.
                   </p>
                 </div>
