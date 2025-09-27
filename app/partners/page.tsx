@@ -63,14 +63,14 @@ const PartnersPage = () => {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="space-y-6">
-              <p className="text-base sm:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
+            <div className="space-y-6 text-center lg:text-left">
+              <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
                 We invest in founder-led brands - majority or minority - with a carry-only structure and no management fees.
               </p>
-              <p className="text-base sm:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
+              <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
                 Each deal is designed with the right capital partners or at times, entirely with our own capital.
               </p>
-              <p className="text-base sm:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
+              <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
                 The goal is always the same: to scale founder-led brands with hands-on support in finance, development, operations, and marketing.
               </p>
             </div>
