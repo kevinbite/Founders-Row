@@ -35,7 +35,7 @@ const AdvisoryPage = () => {
           
           <div className="max-w-4xl mx-auto px-2">
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-300 leading-relaxed font-montserrat balanced-text">
-              FR Advisory is the consulting and incubation arm of Founders Row. Dedicated to working with only four companies at a time, Advisory provides one-year, deep operational partnerships that can be structured as either fee-based or equity-based engagements.
+              Founders Row Advisory partners with brands on a non-investment basis, embedding our team, systems, and founder perspective directly into their business. Through customized scopes of work, founders gain access to a fractional C-suite — strategy, finance, operations, development, brand, and marketing expertise — without having to build it in-house. Advisory is hands-on, practical, and built around the challenges founders actually face: opening the next location, raising capital, scaling leadership, and preparing for outside investment.
             </p>
           </div>
         </div>
@@ -124,13 +124,13 @@ const AdvisoryPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6 text-center lg:text-left">
               <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
-                Advisory exists to give founders the structure, strategy, and creative execution they need in the early years — and serves as an incubator for brands that may ultimately graduate into FR Partners.
+                We embed directly into your business on a non-investment basis, bringing our complete team, systems, and founder perspective to your daily operations. This isn't consulting from the sidelines — it's true partnership.
               </p>
               <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
-                From opening new locations to raising capital to negotiating with private equity, we are your founder-first partner.
+                Through customized scopes of work, you gain access to fractional C-suite expertise across strategy, finance, operations, development, brand, and marketing — capabilities that would typically cost hundreds of thousands to build in-house.
               </p>
               <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
-                We provide deep operational partnerships that can be structured as either fee-based or equity-based engagements, tailored to your specific needs and stage.
+                We focus on the real challenges founders face: opening the next location, raising capital, scaling leadership, and preparing for outside investment. Advisory serves as your operational foundation and potential pathway to FR Partners.
               </p>
             </div>
             

@@ -76,4 +76,42 @@
       hyphens: manual;
     }
   }
+  
+  /* Platform tile text optimization */
+  .platform-text {
+    text-wrap: balance;
+    text-align: center;
+    orphans: 3;
+    widows: 3;
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: break-word;
+    word-spacing: normal;
+    letter-spacing: normal;
+    line-height: 1.65;
+    max-width: 52ch;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 1024px) {
+    .platform-text {
+      max-width: 48ch;
+      line-height: 1.6;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .platform-text {
+      max-width: 42ch;
+      line-height: 1.6;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .platform-text {
+      max-width: 38ch;
+      line-height: 1.55;
+      hyphens: none;
+    }
+  }
 }

@@ -4,14 +4,14 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
+      className="relative h-[65vh] sm:h-[70vh] flex items-start justify-center bg-cover bg-center bg-no-repeat pt-24 sm:pt-32"
       style={{backgroundImage: "url('/images/atlanta-skyline-at-dusk.jpg')"}}
     >
       {/* Dark overlay for subtle background image */}
       <div className="absolute inset-0 bg-black/40"></div>
       
-      {/* Centered Logo and Quote */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center space-y-8">
+      {/* Logo and Quote positioned closer to top */}
+      <div className="relative z-10 flex flex-col items-center text-center space-y-6 sm:space-y-8">
         <Image
           src="/logos/Screenshot 2025-09-07 130347.png"
           alt="Founders Row Logo"

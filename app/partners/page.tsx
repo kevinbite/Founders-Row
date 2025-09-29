@@ -35,7 +35,7 @@ const PartnersPage = () => {
           
           <div className="max-w-4xl mx-auto px-2">
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-300 leading-relaxed font-montserrat balanced-text">
-              FR Partners is the investment arm of Founders Row. Each fund is structured deal-by-deal through the FPV, allowing maximum alignment between founders, capital partners, and the Founders Row team.
+              Founders Row Partners is where conviction meets capital. This is our investment arm — where we put our own capital alongside aligned partners to back founder-led brands with the potential to scale into institutional assets. Sometimes we're majority owners, sometimes minority investors, but always operator-partners with skin in the game. Founders Row Partners brings the full weight of our platform — Advisory expertise, Media engine, and founder-level execution — to take brands from proven concept to scaled exits.
             </p>
           </div>
         </div>
@@ -65,13 +65,13 @@ const PartnersPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6 text-center lg:text-left">
               <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
-                We invest in founder-led brands - majority or minority - with a carry-only structure and no management fees.
+                This is where conviction meets capital. We put our own capital alongside aligned partners to back founder-led brands with the potential to scale into institutional assets. Every investment decision is driven by our belief in the founder and their vision.
               </p>
               <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
-                Each deal is designed with the right capital partners or at times, entirely with our own capital.
+                Whether we're majority owners or minority investors, we're always operator-partners with skin in the game. This isn't passive capital — it's active partnership with the full weight of our platform behind every brand.
               </p>
               <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed font-montserrat balanced-text">
-                The goal is always the same: to scale founder-led brands with hands-on support in finance, development, operations, and marketing.
+                We bring Advisory expertise, Media engine firepower, and founder-level execution to take brands from proven concept to scaled exits. Our goal is always institutional-quality growth with founder-led authenticity.
               </p>
             </div>
             

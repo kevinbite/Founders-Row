@@ -1,6 +1,6 @@
 const Tagline = () => {
   return (
-    <section className="py-16 sm:py-20 bg-black relative">
+    <section className="pt-4 pb-16 sm:pt-6 sm:pb-20 bg-black relative">
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -25,19 +25,8 @@ const Tagline = () => {
         {/* Content paragraph */}
         <div className="text-neutral-300 font-montserrat leading-relaxed max-w-3xl mx-auto px-2">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 balanced-text">
-            We are a new model for building brands. Founders Row combines the rigor of private equity, the insight of founder-led advisory, and the reach of a modern creative studio. Our mission is simple; back ambitious founders and help them scale enduring companies.
+            Founders Row is a next-generation brand builder. We bring the discipline of private equity, the empathy of founder-led advisory, and the firepower of a world-class creative studio. We exist for one reason: to help founders go further, faster. We are producers for founders the way Rick Rubin and Jimmy Iovine produced some of the greatest musicians of our time — shaping, amplifying, and pushing them to greatness. (And yes, those guys are our idols.)
           </p>
-          
-          {/* CTA Button */}
-          <div className="mt-6 sm:mt-8">
-            <a 
-              href="/contact"
-              className="inline-block bg-white hover:bg-gray-100 text-black font-medium py-3 sm:py-4 px-6 sm:px-8 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-black font-montserrat text-sm sm:text-base md:text-lg"
-              aria-label="Navigate to Contact page to work with us"
-            >
-              Work With Us
-            </a>
-          </div>
         </div>
       </div>
     </section>
