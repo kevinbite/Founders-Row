@@ -51,8 +51,10 @@ const FounderLetter = () => {
                 <div className="absolute top-0.5 left-0.5 w-1 h-1 bg-white/40 rounded-full"></div>
               </div>
               <div className="text-xl sm:text-2xl md:text-3xl font-light text-white font-montserrat leading-relaxed pl-8 sm:pl-12">
-                <div className="mb-2">This isn't another private equity firm.</div>
-                <div className="text-neutral-300 font-medium">This is Founders Row.</div>
+                <div className="mb-2 sm:mb-2">
+                  <span>This isn't another private equity firm. </span>
+                  <span className="text-neutral-300 font-medium sm:block">This is Founders Row.</span>
+                </div>
               </div>
             </div>
             
