@@ -1,37 +1,37 @@
-import Image from 'next/image'
-
 const Hero = () => {
   return (
     <section 
       id="home" 
-      className="relative h-[65vh] sm:h-[70vh] flex items-start justify-center bg-cover bg-center bg-no-repeat pt-24 sm:pt-32"
+      className="relative h-screen flex flex-col justify-center bg-cover bg-center bg-no-repeat"
       style={{backgroundImage: "url('/images/atlanta-skyline-at-dusk.jpg')"}}
     >
-      {/* Dark overlay for subtle background image */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      {/* Light overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/30"></div>
       
-      {/* Logo and Quote positioned closer to top */}
-      <div className="relative z-10 flex flex-col items-center text-center space-y-6 sm:space-y-8">
-        <Image
-          src="/logos/Screenshot 2025-09-07 130347.png"
-          alt="Founders Row Logo"
-          width={600}
-          height={300}
-          className="max-w-lg w-full h-auto"
-          priority
-        />
+      {/* Main content */}
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 flex-1">
+        {/* Main heading */}
+        <div className="max-w-6xl mx-auto mb-8 sm:mb-12">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-white leading-tight tracking-wide font-cinzel">
+            Capital. Creativity. Execution.
+          </h1>
+        </div>
         
-        <div className="max-w-2xl px-4">
+        {/* Quote section */}
+        <div className="max-w-3xl mx-auto">
           <blockquote className="text-white">
-            <p className="text-xl sm:text-2xl font-light italic leading-relaxed mb-4 font-cinzel">
+            <p className="text-lg sm:text-xl md:text-2xl font-light italic leading-relaxed mb-4 font-cinzel opacity-90">
               "Live in the future, then build what's missing."
             </p>
-            <cite className="text-lg sm:text-xl text-neutral-300 font-normal not-italic font-cinzel">
+            <cite className="text-base sm:text-lg md:text-xl text-white/80 font-normal not-italic font-cinzel">
               – Paul Graham
             </cite>
           </blockquote>
         </div>
       </div>
+      
+      {/* Bottom dark overlay section */}
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent h-32 sm:h-40"></div>
     </section>
   )
 }
