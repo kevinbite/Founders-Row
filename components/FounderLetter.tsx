@@ -57,7 +57,7 @@ const FounderLetter = () => {
             </div>
             
             {/* Letter Paragraphs */}
-            <div className="space-y-6 sm:space-y-8 text-base sm:text-lg text-neutral-300 font-montserrat leading-relaxed">
+            <div className="space-y-6 sm:space-y-8 text-sm text-center sm:text-base sm:text-left lg:text-lg text-neutral-300 font-montserrat leading-relaxed">
               <p className="balanced-text">
                 I'm just a regular guy who's gotten more wrong than right. I've stumbled, failed, and asked for forgiveness more times than I can count. But after 30 years of building, one truth has become undeniable to me: <span className="text-white font-medium">founders are — and always will be — the engine of capitalism.</span>
               </p>
