@@ -28,8 +28,12 @@ const HeroSection = ({
   return (
     <section 
       aria-label="Hero" 
-      className="relative h-screen bg-black"
-      style={{ overflow: 'visible' }}
+      className="relative bg-black"
+      style={{ 
+        height: '100vh',
+        minHeight: '800px',
+        overflow: 'visible' 
+      }}
     >
       {/* Full-bleed Background Image */}
       <div className="absolute inset-0 z-0">
@@ -68,8 +72,8 @@ const HeroSection = ({
         className="absolute left-0 right-0 pointer-events-none"
         style={{ 
           bottom: '30vh',
-          height: '12vh',
-          minHeight: '120px',
+          height: '15vh',
+          minHeight: '150px',
           maxHeight: '200px',
           zIndex: 50
         }}
