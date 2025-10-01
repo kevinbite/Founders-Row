@@ -28,16 +28,18 @@ const HeroSection = ({
   return (
     <section 
       aria-label="Hero" 
-      className="relative overflow-hidden bg-black"
+      className="relative h-screen bg-black"
+      style={{ overflow: 'visible' }}
     >
       {/* Full-bleed Background Image */}
-      <div className="absolute inset-0 z-0 bg-black">
+      <div className="absolute inset-0 z-0">
         <div 
-          className="absolute inset-0 bg-no-repeat bg-black"
+          className="absolute inset-0 w-full h-full"
           style={{ 
             backgroundImage: `url('${heroImageSrc}')`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center center'
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat'
           }}
         />
         {/* Dark overlay for better text readability */}
@@ -45,8 +47,8 @@ const HeroSection = ({
       </div>
 
       {/* Hero Content Stack */}
-      <div className="relative z-20 min-h-[100vh] flex items-start justify-center pt-32 sm:pt-48 md:pt-64 lg:pt-80">
-        <div className="text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+      <div className="relative z-10 h-full flex items-start justify-center px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 md:pt-48 lg:pt-56">
+        <div className="text-center max-w-4xl mx-auto w-full">
           <div 
             className={`transition-all duration-700 ease-out ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
@@ -62,17 +64,27 @@ const HeroSection = ({
       </div>
 
       {/* Bottom Triangle Transition - Solid Black */}
-      <div className="absolute bottom-[20vh] sm:bottom-[25vh] md:bottom-[30vh] left-0 right-0 h-48 sm:h-56 md:h-64 lg:h-72 z-30 pointer-events-none">
+      <div 
+        className="absolute left-0 right-0 pointer-events-none"
+        style={{ 
+          bottom: '30vh',
+          height: '12vh',
+          minHeight: '120px',
+          maxHeight: '200px',
+          zIndex: 50
+        }}
+      >
         <svg 
-          className="absolute w-full h-full" 
+          width="100%" 
+          height="100%" 
           viewBox="0 0 1200 300" 
           preserveAspectRatio="none"
           style={{ display: 'block' }}
         >
           {/* Left triangle pointing down to center */}
-          <polygon points="0,0 600,300 0,300" fill="#000000" opacity="1" />
+          <polygon points="0,0 600,300 0,300" fill="#000000" />
           {/* Right triangle pointing down to center */}
-          <polygon points="1200,0 600,300 1200,300" fill="#000000" opacity="1" />
+          <polygon points="1200,0 600,300 1200,300" fill="#000000" />
         </svg>
       </div>
 

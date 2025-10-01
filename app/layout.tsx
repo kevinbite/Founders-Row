@@ -23,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${cinzel.variable} ${montserrat.variable} antialiased`}>
+    <html lang="en" className="bg-black">
+      <body className={`${inter.variable} ${cinzel.variable} ${montserrat.variable} antialiased bg-black`}>
         {children}
         <Analytics />
         <SpeedInsights />
