@@ -53,7 +53,7 @@ const HeroSection = ({
             }`}
           >
             {/* Main Statement */}
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white leading-relaxed tracking-wide font-montserrat">
+            <h1 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light text-white leading-relaxed tracking-wide font-montserrat">
               This isn't another private equity firm.<br />
               <span className="font-medium">This is Founders Row.</span>
             </h1>
