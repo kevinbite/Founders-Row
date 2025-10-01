@@ -151,12 +151,12 @@ const SiteHeader = () => {
 
       {/* Mobile menu overlay */}
       {isMenuOpen && (
-        <div 
+        <div
           id="mobile-menu"
-          className="lg:hidden fixed inset-0 top-20 z-40"
+          className="lg:hidden fixed inset-0 z-40"
           style={{ backgroundColor: '#000000' }}
         >
-          <div className="px-6 pt-8 pb-6 space-y-6">
+          <div className="pt-24 px-6 pb-6 space-y-6">
             {navItems.slice(0, -1).map((item, index) => (
               <a
                 key={item.name}
