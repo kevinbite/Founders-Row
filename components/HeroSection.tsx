@@ -60,36 +60,11 @@ const HeroSection = ({
           >
             {/* Main Statement */}
             <h1 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light text-white leading-relaxed tracking-wide font-montserrat">
-              This isn't another private equity firm.<br />
-              <span className="font-medium">This is Founders Row.</span>
+              We aren't another private equity firm.<br />
+              <span className="font-medium">We are Founders Row.</span>
             </h1>
           </div>
         </div>
-      </div>
-
-      {/* Bottom Triangle Transition - Solid Black */}
-      <div 
-        className="absolute left-0 right-0 pointer-events-none"
-        style={{ 
-          bottom: '30vh',
-          height: '15vh',
-          minHeight: '150px',
-          maxHeight: '200px',
-          zIndex: 50
-        }}
-      >
-        <svg 
-          width="100%" 
-          height="100%" 
-          viewBox="0 0 1200 300" 
-          preserveAspectRatio="none"
-          style={{ display: 'block' }}
-        >
-          {/* Left triangle pointing down to center */}
-          <polygon points="0,0 600,300 0,300" fill="#000000" />
-          {/* Right triangle pointing down to center */}
-          <polygon points="1200,0 600,300 1200,300" fill="#000000" />
-        </svg>
       </div>
 
     </section>
