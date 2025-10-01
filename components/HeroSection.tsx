@@ -36,8 +36,8 @@ const HeroSection = ({
           className="absolute inset-0 bg-no-repeat bg-black"
           style={{ 
             backgroundImage: `url('${heroImageSrc}')`,
-            backgroundSize: 'contain',
-            backgroundPosition: 'center top'
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center'
           }}
         />
         {/* Dark overlay for better text readability */}
@@ -45,7 +45,7 @@ const HeroSection = ({
       </div>
 
       {/* Hero Content Stack */}
-      <div className="relative z-20 min-h-[80vh] md:min-h-[90vh] lg:min-h-[100vh] flex items-start justify-center pt-64 md:pt-72 lg:pt-80">
+      <div className="relative z-20 min-h-[100vh] flex items-start justify-center pt-32 sm:pt-48 md:pt-64 lg:pt-80">
         <div className="text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <div 
             className={`transition-all duration-700 ease-out ${
