@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 interface HeroSectionProps {
   heroImageSrc?: string
@@ -63,6 +64,24 @@ const HeroSection = ({
               We aren't another private equity firm.<br />
               <span className="font-medium">We are Founders Row.</span>
             </h1>
+
+            {/* CTA Buttons */}
+            <div className="mt-6 sm:mt-8 flex flex-col items-center gap-5 sm:gap-6" role="group" aria-label="Primary actions">
+              <Link
+                href="/about"
+                aria-label="Learn about our mission"
+                className="bg-transparent border-2 border-white/30 text-white px-6 py-2.5 text-base font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
+              >
+                Our Mission
+              </Link>
+              <Link
+                href="/contact"
+                aria-label="Get in touch with Founders Row"
+                className="bg-transparent border-2 border-white/30 text-white px-6 py-2.5 text-base font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
+              >
+                Get In Touch
+              </Link>
+            </div>
           </div>
         </div>
       </div>

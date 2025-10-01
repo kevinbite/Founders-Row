@@ -1,6 +1,6 @@
 const AboutSection = () => {
   return (
-    <section className="relative bg-black py-12 sm:py-16 md:py-20 lg:py-24 -mt-64 sm:-mt-80 md:-mt-96 lg:-mt-[28rem] z-40">
+    <section className="relative bg-black py-12 sm:py-16 md:py-20 lg:py-24 -mt-80 sm:-mt-80 md:-mt-64 lg:-mt-20 z-40">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
