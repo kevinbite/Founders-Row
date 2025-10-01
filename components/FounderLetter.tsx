@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const FounderLetter = () => {
   return (
-    <section id="about" className="pt-8 sm:pt-12 lg:pt-16 pb-16 sm:pb-20 lg:pb-24 bg-black relative overflow-hidden">
+    <section id="about" className="pt-24 sm:pt-32 lg:pt-40 pb-16 sm:pb-20 lg:pb-24 bg-black relative overflow-hidden">
       
       {/* Sophisticated Background Elements */}
       <div className="absolute inset-0">
@@ -42,22 +42,6 @@ const FounderLetter = () => {
           {/* Letter Content */}
           <div className="lg:col-span-8 space-y-8 sm:space-y-10">
             
-            {/* Opening Statement */}
-            <div className="relative">
-              {/* Elegant geometric accent - top left */}
-              <div className="absolute -left-6 top-0 w-8 h-8">
-                <div className="absolute inset-0 border-l-2 border-t-2 border-white/30 rounded-tl-lg"></div>
-                <div className="absolute top-1 left-1 w-3 h-3 border-l border-t border-white/20 rounded-tl-sm"></div>
-                <div className="absolute top-0.5 left-0.5 w-1 h-1 bg-white/40 rounded-full"></div>
-              </div>
-              <div className="text-xl sm:text-2xl md:text-3xl font-light text-white font-montserrat leading-relaxed pl-8 sm:pl-12">
-                <div className="mb-2 sm:mb-2">
-                  <span>This isn't another private equity firm. </span>
-                  <span className="text-neutral-300 font-medium sm:block">This is Founders Row.</span>
-                </div>
-              </div>
-            </div>
-            
             {/* Letter Paragraphs */}
             <div className="space-y-6 sm:space-y-8 text-sm text-center sm:text-base sm:text-left lg:text-lg text-neutral-300 font-montserrat leading-relaxed">
               <p className="balanced-text">
@@ -83,15 +67,9 @@ const FounderLetter = () => {
             
             {/* Closing Statement */}
             <div className="relative pt-6 sm:pt-8">
-              <div className="text-lg sm:text-xl md:text-2xl font-medium text-white font-montserrat leading-relaxed text-center lg:text-left">
+              <div className="text-lg sm:text-xl md:text-2xl font-medium text-white font-montserrat leading-relaxed text-center">
                 <div className="mb-2">This is my mission. This is our obsession.</div>
                 <div className="text-neutral-300 font-light">Welcome to Founders Row.</div>
-              </div>
-              {/* Elegant geometric accent - bottom right */}
-              <div className="absolute -right-6 bottom-0 w-8 h-8">
-                <div className="absolute inset-0 border-r-2 border-b-2 border-white/30 rounded-br-lg"></div>
-                <div className="absolute bottom-1 right-1 w-3 h-3 border-r border-b border-white/20 rounded-br-sm"></div>
-                <div className="absolute bottom-0.5 right-0.5 w-1 h-1 bg-white/40 rounded-full"></div>
               </div>
             </div>
             

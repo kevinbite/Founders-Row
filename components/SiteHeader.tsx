@@ -38,8 +38,9 @@ const SiteHeader = () => {
 
   const navItems = [
     { name: 'About', href: '/about' },
-    { name: 'Advisory', href: '/advisory' },
     { name: 'Partners', href: '/partners' },
+    { name: 'Advisory', href: '/advisory' },
+    { name: 'Media', href: '/media' },
     { name: 'Contact', href: '/contact' },
   ]
 
@@ -67,9 +68,9 @@ const SiteHeader = () => {
               <Image
                 src="/logos/Screenshot 2025-09-07 130347.png"
                 alt="Founders Row Logo"
-                width={240}
-                height={60}
-                className="h-12 w-auto"
+                width={400}
+                height={100}
+                className="h-20 w-auto"
                 priority
               />
             </a>
