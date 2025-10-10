@@ -57,9 +57,9 @@ const SiteHeader = () => {
       }`}
     >
       <nav aria-label="Main" className="max-w-7xl mx-auto px-6 lg:px-8 !bg-transparent">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between lg:justify-between items-center h-20 relative">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 lg:static absolute left-1/2 transform -translate-x-1/2 lg:transform-none lg:translate-x-0">
             <a 
               href="/" 
               className="focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent rounded-lg p-1 transition-all duration-200"
@@ -102,7 +102,7 @@ const SiteHeader = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden relative z-10">
             <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-3 rounded-lg text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"

@@ -14,9 +14,6 @@ const AboutSection = () => {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-5 sm:space-y-6 md:space-y-8">
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat text-center">
-            Founded by serial entrepreneur Jamie Weeks, Founders Row represents two decades of experience building, scaling, and exiting founder-led businesses—from operating the world's largest Orangetheory Fitness franchise to growing Sweathouz into a national brand.
-          </p>
           
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat text-center">
             We are a founder-first investment platform based in Atlanta, Georgia, operating at the intersection of capital, creativity, and execution. Our model combines private equity discipline with creative studio agility.
