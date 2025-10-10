@@ -29,30 +29,45 @@ const HeroSection = ({
   return (
     <section 
       aria-label="Hero" 
-      className="relative bg-black"
+      className="relative bg-black -mt-20"
       style={{ 
-        height: '100vh',
-        minHeight: '800px',
-        overflow: 'visible' 
+        height: 'calc(100vh + 80px)',
+        minHeight: '880px',
+        overflow: 'visible'
       }}
     >
-      {/* Full-bleed Background Image */}
+      {/* Full-bleed Background Video */}
       <div className="absolute inset-0 z-0">
-        <div 
-          className="absolute inset-0 w-full h-full"
-          style={{ 
-            backgroundImage: `url('${heroImageSrc}')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        />
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          webkit-playsinline="true"
+          x5-playsinline="true"
+          x5-video-player-type="h5"
+          x5-video-player-fullscreen="false"
+        >
+          <source src="/images/Animated_Video_with_Moving_Sky.mp4" type="video/mp4" />
+          {/* Fallback background image if video fails to load */}
+          <div 
+            className="absolute inset-0 w-full h-full"
+            style={{ 
+              backgroundImage: `url('${heroImageSrc}')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          />
+        </video>
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/80"></div>
       </div>
 
       {/* Hero Content Stack */}
-      <div className="relative z-10 h-full flex items-start justify-center px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 md:pt-48 lg:pt-56">
+      <div className="relative z-10 h-full flex items-start justify-center px-4 sm:px-6 lg:px-8 pt-56 sm:pt-64 md:pt-72 lg:pt-80">
         <div className="text-center max-w-4xl mx-auto w-full">
           <div 
             className={`transition-all duration-700 ease-out ${

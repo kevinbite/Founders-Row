@@ -9,7 +9,7 @@ const SiteHeader = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
+      setIsScrolled(window.scrollY > 10)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -52,11 +52,11 @@ const SiteHeader = () => {
     <header 
       className={`lg:fixed w-full top-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-black/95 backdrop-blur-md shadow-lg border-b border-white/10' 
-          : 'bg-transparent'
+          ? 'bg-black/95 backdrop-blur-md shadow-lg border-b-2 border-white/10' 
+          : '!bg-transparent'
       }`}
     >
-      <nav aria-label="Main" className="max-w-7xl mx-auto px-6 lg:px-8">
+      <nav aria-label="Main" className="max-w-7xl mx-auto px-6 lg:px-8 !bg-transparent">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">

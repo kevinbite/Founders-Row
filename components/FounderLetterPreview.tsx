@@ -25,9 +25,6 @@ const FounderLetterPreview = () => {
         {/* Elegant Header Section */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <div className="relative inline-block">
-            {/* Decorative top accent */}
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-            
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-white font-cinzel leading-tight tracking-wide mb-6">
               <div>A Letter from Our Founder,</div>
               <div className="text-neutral-300">Jamie Weeks</div>
