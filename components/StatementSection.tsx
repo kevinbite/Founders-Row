@@ -3,7 +3,32 @@ const StatementSection = () => {
     <section className="relative z-40 bg-black">
       {/* Three Part Statement */}
       <div className="relative z-10 w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-10 md:py-12">
-        <div className="flex flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12 max-w-6xl mx-auto">
+        
+        {/* Mobile Layout - Stacked */}
+        <div className="block md:hidden">
+          <div className="text-center space-y-4">
+            {/* First line: Part, Part, 100% */}
+            <div className="flex items-center justify-center gap-4">
+              <span className="text-sm text-white font-bold font-montserrat tracking-wide">Part</span>
+              <div className="w-[2px] h-6 bg-gradient-to-b from-transparent via-white/80 to-transparent"></div>
+              <span className="text-sm text-white font-bold font-montserrat tracking-wide">Part</span>
+              <div className="w-[2px] h-6 bg-gradient-to-b from-transparent via-white/80 to-transparent"></div>
+              <span className="text-sm text-white font-bold font-montserrat tracking-wide">100%</span>
+            </div>
+            
+            {/* Second line: investment firm, creative producer, founder-obsessed */}
+            <div className="flex items-center justify-center gap-4">
+              <span className="text-sm text-white font-bold font-montserrat tracking-wide">investment firm.</span>
+              <div className="w-[2px] h-6 bg-gradient-to-b from-transparent via-white/80 to-transparent"></div>
+              <span className="text-sm text-white font-bold font-montserrat tracking-wide">creative producer.</span>
+              <div className="w-[2px] h-6 bg-gradient-to-b from-transparent via-white/80 to-transparent"></div>
+              <span className="text-sm text-white font-bold font-montserrat tracking-wide">founder-obsessed.</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Layout - Horizontal */}
+        <div className="hidden md:flex flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12 max-w-6xl mx-auto">
           <div className="text-center flex-shrink-0 flex items-center justify-center">
             <p className="text-[10px] xs:text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white font-bold font-montserrat tracking-wide leading-tight text-center">
               Part investment firm.
