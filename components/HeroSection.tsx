@@ -42,13 +42,18 @@ const HeroSection = ({
       }}
     >
       {/* Full-bleed Background Video */}
-      <div className="absolute z-0" style={{ top: '-80px', left: '0px', right: '0px', bottom: '0px' }}>
+      <div className="absolute z-0" style={{ 
+        top: isMobile ? '-80px' : '-80px', 
+        left: '0px', 
+        right: '0px', 
+        bottom: isMobile ? '-20vh' : '0px' 
+      }}>
         <video
           className="absolute top-0 left-0 w-full h-full object-contain md:object-cover"
           style={{ 
             width: '100%', 
-            height: 'calc(100% + 80px)',
-            objectPosition: 'center center'
+            height: isMobile ? 'calc(100% + 100px)' : 'calc(100% + 80px)',
+            objectPosition: isMobile ? 'center top' : 'center center'
           }}
           autoPlay
           loop
