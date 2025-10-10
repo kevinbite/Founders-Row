@@ -46,14 +46,14 @@ const HeroSection = ({
         top: isMobile ? '-80px' : '-80px', 
         left: '0px', 
         right: '0px', 
-        bottom: isMobile ? '-20vh' : '0px' 
+        bottom: isMobile ? '-10vh' : '0px' 
       }}>
         <video
-          className="absolute top-0 left-0 w-full h-full object-contain md:object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover"
           style={{ 
             width: '100%', 
-            height: isMobile ? 'calc(100% + 100px)' : 'calc(100% + 80px)',
-            objectPosition: isMobile ? 'center top' : 'center center'
+            height: isMobile ? 'calc(100% + 80px)' : 'calc(100% + 80px)',
+            objectPosition: isMobile ? 'center 20%' : 'center center'
           }}
           autoPlay
           loop
