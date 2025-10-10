@@ -50,7 +50,7 @@ const SiteHeader = () => {
 
   return (
     <header 
-      className={`lg:fixed w-full top-0 z-50 transition-all duration-300 ${
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-black/95 backdrop-blur-md shadow-lg border-b-2 border-white/10' 
           : '!bg-transparent'

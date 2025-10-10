@@ -29,17 +29,23 @@ const HeroSection = ({
   return (
     <section 
       aria-label="Hero" 
-      className="relative bg-black -mt-20"
+      className="relative bg-black -mt-20 lg:-mt-20"
       style={{ 
         height: 'calc(100vh + 80px)',
-        minHeight: '880px',
-        overflow: 'visible'
+        minHeight: '100vh',
+        overflow: 'hidden'
       }}
     >
       {/* Full-bleed Background Video */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0" style={{ top: '0px', left: '0px', right: '0px', bottom: '0px' }}>
         <video
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          style={{ 
+            minWidth: '100%', 
+            minHeight: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center center'
+          }}
           autoPlay
           loop
           muted
