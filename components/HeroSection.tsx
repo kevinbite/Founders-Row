@@ -21,9 +21,14 @@ const HeroSection = ({
   panelCol2 = 'We are producers for founders the way Rick Rubin and Jimmy Iovine produced some of the greatest musicians of our time — shaping, amplifying, and pushing them to greatness. (And yes, those guys are our idols.)'
 }: HeroSectionProps) => {
   const [isVisible, setIsVisible] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     setIsVisible(true)
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
   return (
@@ -31,19 +36,19 @@ const HeroSection = ({
       aria-label="Hero" 
       className="relative bg-black -mt-20"
       style={{ 
-        height: '100vh',
-        minHeight: '100vh',
+        height: isMobile ? '120vh' : '100vh',
+        minHeight: isMobile ? '120vh' : '100vh',
         overflow: 'hidden'
       }}
     >
       {/* Full-bleed Background Video */}
       <div className="absolute z-0" style={{ top: '-80px', left: '0px', right: '0px', bottom: '0px' }}>
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-contain md:object-cover"
           style={{ 
             width: '100%', 
             height: 'calc(100% + 80px)',
-            objectPosition: 'center top'
+            objectPosition: 'center center'
           }}
           autoPlay
           loop
