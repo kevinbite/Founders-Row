@@ -1,10 +1,12 @@
 import SiteHeader from '@/components/SiteHeader'
+import BackHome from '@/components/BackHome'
 import Footer from '@/components/Footer'
 
 const ContactPage = () => {
   return (
     <div className="min-h-screen bg-black flex flex-col">
       <SiteHeader />
+      <BackHome />
 
       {/* CTA Section */}
       <section className="pt-24 sm:pt-32 lg:pt-40 pb-16 sm:pb-20 lg:pb-24 bg-black relative overflow-hidden">

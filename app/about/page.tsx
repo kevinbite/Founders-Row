@@ -1,10 +1,12 @@
 import SiteHeader from '@/components/SiteHeader'
+import BackHome from '@/components/BackHome'
 import Footer from '@/components/Footer'
 
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-black flex flex-col">
       <SiteHeader />
+      <BackHome />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 bg-black relative overflow-hidden">
@@ -208,6 +210,33 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* FPV Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-black relative overflow-hidden">
+        {/* Background accents */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.05) 1px, transparent 1px),
+                           radial-gradient(circle at 75% 75%, rgba(255,255,255,0.03) 1px, transparent 1px)`,
+          backgroundSize: '50px 50px, 80px 80px',
+          backgroundPosition: '0 0, 25px 25px'
+        }}></div>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
+          <div className="relative inline-block">
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-white font-cinzel leading-tight tracking-wide mb-6">
+              The Founder Partnership Vehicle (FPV)
+            </h2>
+            <div className="w-32 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto"></div>
+          </div>
+
+          <div className="space-y-6 sm:space-y-8 text-neutral-300 text-base sm:text-lg md:text-xl font-montserrat leading-relaxed">
+            <p>We don’t run traditional funds — we build <span className="text-white font-medium">Founder Partnership Vehicles.</span></p>
+            <p>Each FPV is a deal-by-deal platform designed around one brand and one founder. It gives us the freedom to stay hands-on, creative, and focused — without the red tape of institutional capital.</p>
+            <p>This model ensures every founder we back gets our full attention, our full team, and the same world-class resources — brand, finance, media, and operations — from day one.</p>
+            <p>For our investors and partners, it means alignment is simple: <span className="text-white font-medium">we only win when the founders do.</span></p>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-16 sm:py-20 lg:py-24 pb-16 sm:pb-20 lg:pb-24 bg-black relative overflow-hidden">

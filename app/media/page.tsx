@@ -1,10 +1,12 @@
 import SiteHeader from '@/components/SiteHeader'
+import BackHome from '@/components/BackHome'
 import Footer from '@/components/Footer'
 
 export default function MediaPage() {
   return (
     <main className="relative bg-black">
       <SiteHeader />
+      <BackHome />
       
       {/* Media Content Section */}
       <section className="pt-24 sm:pt-32 lg:pt-40 pb-16 sm:pb-20 lg:pb-24 bg-black relative overflow-hidden">

@@ -1,4 +1,5 @@
 import SiteHeader from '@/components/SiteHeader'
+import BackHome from '@/components/BackHome'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
 
@@ -6,6 +7,7 @@ const PartnersPage = () => {
   return (
     <div className="min-h-screen bg-black flex flex-col">
       <SiteHeader />
+      <BackHome />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 bg-black relative overflow-hidden">
