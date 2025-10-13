@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface HeroSectionProps {
   heroImageSrc?: string
@@ -82,7 +83,7 @@ const HeroSection = ({
       </div>
 
       {/* Hero Content Stack */}
-      <div className="relative z-10 h-full flex items-start justify-center px-4 sm:px-6 lg:px-8 pt-56 sm:pt-64 md:pt-72 lg:pt-80">
+      <div className="relative z-10 h-full flex items-start justify-center px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 md:pt-48 lg:pt-56">
         <div className="text-center max-w-4xl mx-auto w-full">
           <div 
             className={`transition-all duration-700 ease-out ${
@@ -90,28 +91,23 @@ const HeroSection = ({
             }`}
           >
             {/* Main Statement */}
-            <h1 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light text-white leading-relaxed tracking-wide font-montserrat">
+            <h1 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light text-white leading-relaxed tracking-wide font-montserrat mb-8 sm:mb-10 md:mb-12 mt-6 sm:mt-8 md:mt-10 lg:mt-12">
               We aren't another private equity firm.<br />
               <span className="font-medium">We are Founders Row.</span>
             </h1>
 
-            {/* CTA Buttons */}
-            <div className="mt-6 sm:mt-8 flex flex-col items-center gap-5 sm:gap-6" role="group" aria-label="Primary actions">
-              <Link
-                href="/about"
-                aria-label="Learn about our mission"
-                className="bg-transparent border-2 border-white/30 text-white px-6 py-2.5 text-base font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
-              >
-                Our Mission
-              </Link>
-              <Link
-                href="/contact"
-                aria-label="Get in touch with Founders Row"
-                className="bg-transparent border-2 border-white/30 text-white px-6 py-2.5 text-base font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
-              >
-                Get In Touch
-              </Link>
+            {/* Logo */}
+            <div className="flex justify-center">
+              <Image
+                src="/logos/Screenshot 2025-09-07 130347.png"
+                alt="Founders Row Logo"
+                width={600}
+                height={150}
+                className="h-24 sm:h-28 md:h-32 lg:h-36 xl:h-40 w-auto"
+                priority
+              />
             </div>
+
           </div>
         </div>
       </div>

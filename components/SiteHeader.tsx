@@ -37,7 +37,7 @@ const SiteHeader = () => {
   }, [isMenuOpen])
 
   const navItems = [
-    { name: 'About', href: '/about' },
+    { name: 'Our Mission', href: '/about' },
     { name: 'Partners', href: '/partners' },
     { name: 'Advisory', href: '/advisory' },
     { name: 'Media', href: '/media' },
@@ -57,41 +57,26 @@ const SiteHeader = () => {
       }`}
     >
       <nav aria-label="Main" className="max-w-7xl mx-auto px-6 lg:px-8 !bg-transparent">
-        <div className="flex justify-between lg:justify-between items-center h-20 relative">
-          {/* Logo */}
-          <div className="flex-shrink-0 lg:static absolute left-1/2 transform -translate-x-1/2 lg:transform-none lg:translate-x-0">
-            <a 
-              href="/" 
-              className="focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent rounded-lg p-1 transition-all duration-200"
-              aria-label="Founders Row Home"
-            >
-              <Image
-                src="/logos/Screenshot 2025-09-07 130347.png"
-                alt="Founders Row Logo"
-                width={400}
-                height={100}
-                className="h-20 w-auto"
-                priority
-              />
-            </a>
-          </div>
-
-          {/* Desktop Navigation */}
+        <div className="flex justify-between items-center h-20 relative">
+          {/* Left spacer for balance */}
+          <div className="flex-1"></div>
+          
+          {/* Centered Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <div className="flex items-center space-x-8">
-              {navItems.slice(0, -1).map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-white/90 hover:text-white px-4 py-2 text-base font-medium font-cinzel transition-all duration-200 hover:underline underline-offset-4 decoration-2 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent rounded-md"
-                  aria-label={`Navigate to ${item.name}`}
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
-            
-            {/* CTA Button */}
+            {navItems.slice(0, -1).map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-white/90 hover:text-white px-4 py-2 text-base font-medium font-cinzel transition-all duration-200 hover:underline underline-offset-4 decoration-2 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent rounded-md"
+                aria-label={`Navigate to ${item.name}`}
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+          
+          {/* Right-aligned Contact Button */}
+          <div className="hidden lg:flex flex-1 justify-end">
             <a
               href="/contact"
               className="bg-transparent border-2 border-white/30 text-white px-6 py-2.5 text-base font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
@@ -102,7 +87,7 @@ const SiteHeader = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden relative z-10">
+          <div className="lg:hidden absolute right-6 top-1/2 transform -translate-y-1/2 z-10">
             <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-3 rounded-lg text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"

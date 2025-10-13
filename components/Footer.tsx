@@ -8,7 +8,7 @@ const Footer = ({ showLogo = true }: FooterProps) => {
   const currentYear = new Date().getFullYear()
 
   const navItems = [
-    { name: 'About', href: '/about' },
+    { name: 'Our Mission', href: '/about' },
     { name: 'Partners', href: '/partners' },
     { name: 'Advisory', href: '/advisory' },
     { name: 'Media', href: '/media' },
@@ -85,17 +85,31 @@ const Footer = ({ showLogo = true }: FooterProps) => {
           )}
           
           {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center gap-8">
-            {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:underline text-sm sm:text-lg font-medium font-cinzel"
-                  aria-label={`Navigate to ${item.name}`}
-                >
-                  {item.name}
-                </a>
-            ))}
+          <div className="space-y-6">
+            {/* First row - all nav items except Contact */}
+            <div className="flex flex-wrap justify-center gap-8">
+              {navItems.slice(0, -1).map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:underline text-sm sm:text-lg font-medium font-cinzel"
+                    aria-label={`Navigate to ${item.name}`}
+                  >
+                    {item.name}
+                  </a>
+              ))}
+            </div>
+            
+            {/* Second row - Contact button centered */}
+            <div className="flex justify-center">
+              <a
+                href="/contact"
+                className="bg-transparent border-2 border-white/30 text-white px-6 py-2.5 text-base font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
+                aria-label="Contact us"
+              >
+                Contact
+              </a>
+            </div>
           </div>
 
           {/* Social Media Icons */}
