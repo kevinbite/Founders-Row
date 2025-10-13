@@ -83,7 +83,7 @@ const HeroSection = ({
       </div>
 
       {/* Hero Content Stack */}
-      <div className="relative z-10 h-full flex items-start justify-center px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 md:pt-48 lg:pt-56">
+      <div className="relative z-10 h-full flex items-start justify-center px-4 sm:px-6 lg:px-8 pt-48 sm:pt-40 md:pt-48 lg:pt-56">
         <div className="text-center max-w-4xl mx-auto w-full">
           <div 
             className={`transition-all duration-700 ease-out ${
