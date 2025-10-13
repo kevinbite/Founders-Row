@@ -140,35 +140,44 @@ const SiteHeader = () => {
       {isMenuOpen && (
         <div
           id="mobile-menu"
-          className="lg:hidden fixed inset-0 z-40 pt-20"
-          style={{ backgroundColor: '#000000' }}
+          className="lg:hidden fixed inset-0 z-50 flex flex-col bg-black"
         >
-          <div className="px-6 pt-8 pb-6 space-y-6">
-            {navItems.slice(0, -1).map((item, index) => (
+          {/* Close (X) Button */}
+          <div className="flex justify-end px-6 pt-6">
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              aria-label="Close main menu"
+              className="text-white/90 hover:text-white focus:outline-none"
+            >
+              <svg className="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="flex-1 flex flex-col justify-center px-6 space-y-8">
+            {navItems.slice(0, -1).map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block text-white/90 hover:text-white px-4 py-4 text-xl font-medium font-cinzel transition-all duration-200 hover:bg-white/5 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black"
+                className="block text-white/90 hover:text-white text-2xl font-medium font-cinzel text-center transition-all duration-200 focus:outline-none focus:underline"
                 onClick={() => setIsMenuOpen(false)}
                 aria-label={`Navigate to ${item.name}`}
-                tabIndex={isMenuOpen ? 0 : -1}
               >
                 {item.name}
               </a>
             ))}
-            
-            {/* Mobile CTA Button */}
-            <div className="pt-6 border-t border-white/20">
-              <a
-                href="/contact"
-                className="block w-full bg-transparent border-2 border-white/30 text-white text-center px-6 py-4 text-xl font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black"
-                onClick={() => setIsMenuOpen(false)}
-                aria-label="Contact us"
-                tabIndex={isMenuOpen ? 0 : -1}
-              >
-                Contact
-              </a>
-            </div>
+
+            {/* CTA Contact Button */}
+            <a
+              href="/contact"
+              className="block bg-transparent border-2 border-white/30 text-white text-center px-6 py-4 text-2xl font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black"
+              onClick={() => setIsMenuOpen(false)}
+              aria-label="Contact us"
+            >
+              Contact
+            </a>
           </div>
         </div>
       )}
