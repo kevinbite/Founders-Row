@@ -51,9 +51,11 @@ const SiteHeader = () => {
   return (
     <header 
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-black/95 backdrop-blur-md shadow-lg border-b-2 border-white/10' 
-          : '!bg-transparent'
+        isMenuOpen
+          ? 'bg-black/95 backdrop-blur-md shadow-lg border-b-2 border-white/10'
+          : isScrolled 
+            ? 'bg-black/95 backdrop-blur-md shadow-lg border-b-2 border-white/10' 
+            : '!bg-transparent'
       }`}
     >
       <nav aria-label="Main" className="max-w-7xl mx-auto px-6 lg:px-8 !bg-transparent">
@@ -138,7 +140,7 @@ const SiteHeader = () => {
       {isMenuOpen && (
         <div
           id="mobile-menu"
-          className="lg:hidden fixed inset-x-0 top-20 bottom-0 z-40"
+          className="lg:hidden fixed inset-0 z-40 pt-20"
           style={{ backgroundColor: '#000000' }}
         >
           <div className="px-6 pt-8 pb-6 space-y-6">
