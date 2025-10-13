@@ -140,7 +140,7 @@ const SiteHeader = () => {
       {isMenuOpen && (
         <div
           id="mobile-menu"
-          className="lg:hidden fixed inset-0 z-50 flex flex-col bg-black"
+          className="lg:hidden fixed inset-0 z-50 flex flex-col bg-black/95"
         >
           {/* Close (X) Button */}
           <div className="flex justify-end px-6 pt-6">
@@ -156,7 +156,7 @@ const SiteHeader = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex-1 flex flex-col justify-center px-6 space-y-8">
+          <div className="flex-1 flex flex-col justify-center px-6 space-y-8 bg-black/95">
             {navItems.slice(0, -1).map((item) => (
               <a
                 key={item.name}
