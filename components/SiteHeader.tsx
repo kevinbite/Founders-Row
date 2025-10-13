@@ -138,7 +138,8 @@ const SiteHeader = () => {
       {isMenuOpen && (
         <div
           id="mobile-menu"
-          className="lg:hidden fixed inset-x-0 top-20 bottom-0 bg-black z-40"
+          className="lg:hidden fixed inset-x-0 top-20 bottom-0 z-40"
+          style={{ backgroundColor: '#000000' }}
         >
           <div className="px-6 pt-8 pb-6 space-y-6">
             {navItems.slice(0, -1).map((item, index) => (
