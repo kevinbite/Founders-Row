@@ -78,9 +78,12 @@ const HeroSection = ({
             }}
           />
         </video>
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/80"></div>
-      </div>
+            {/* Dark overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/80"></div>
+          </div>
+
+          {/* Bottom gradient transition */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 sm:h-40 md:h-48 lg:h-56 bg-gradient-to-b from-transparent to-black z-20"></div>
 
       {/* Hero Content Stack */}
       <div className="relative z-10 h-full flex items-start justify-center px-4 sm:px-6 lg:px-8 pt-48 sm:pt-40 md:pt-48 lg:pt-56">

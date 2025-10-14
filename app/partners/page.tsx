@@ -32,9 +32,6 @@ const PartnersPage = () => {
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-8 sm:mb-12">
             <div className="relative">
-              {/* Decorative top accent */}
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-              
               <Image
                 src="/logos/FR Partners Logo.png?v=2"
                 alt="FR Partners Logo"
@@ -75,8 +72,6 @@ const PartnersPage = () => {
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 sm:mb-20 lg:mb-24">
             <div className="relative inline-block">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-              
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-white font-cinzel leading-tight tracking-wide mb-6">
                 Investment Approach
               </h2>
@@ -148,8 +143,6 @@ const PartnersPage = () => {
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="relative inline-block mb-12">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-            
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-white font-cinzel leading-tight tracking-wide mb-6">
               Ready to Scale Your Brand?
             </h2>

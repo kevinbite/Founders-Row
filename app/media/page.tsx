@@ -30,9 +30,6 @@ export default function MediaPage() {
           {/* Elegant Header Section */}
           <div className="text-center mb-16 sm:mb-20 lg:mb-24">
             <div className="relative inline-block">
-              {/* Decorative top accent */}
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-              
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white font-cinzel leading-tight tracking-wide mb-6">
                 Founders Row Media
               </h1>
