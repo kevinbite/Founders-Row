@@ -89,7 +89,7 @@ const Platform = () => {
                 <div className="w-32 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent mb-8 mx-auto lg:mx-0 lg:ml-auto"></div>
                 
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat mb-8">
-                  Founders Row Advisory partners with brands on a non-investment basis, embedding our team and systems directly into their business. Founders gain access to fractional C-suite expertise—strategy, finance, operations, brand, and marketing—built around real challenges like scaling, raising capital, and preparing for investment.
+                  Founders Row Advisory works with brands on a non-investment basis, embedding our team and systems directly into their business. Founders gain access to fractional C-suite expertise—strategy, finance, operations, brand, and marketing—built around real challenges like scaling, raising capital, and preparing for investment.
                 </p>
                 
                 <div className="flex justify-center lg:justify-end">

@@ -23,7 +23,7 @@ const WhyWeExist = () => {
 
         {/* Content */}
         <div className="space-y-5 sm:space-y-6 md:space-y-8">
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat italic text-center">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat text-center">
             Behind every legendary album is a producer.
           </p>
           
@@ -31,11 +31,11 @@ const WhyWeExist = () => {
             The artist brings the vision, but the producer shapes the sound, builds the structure, and turns raw talent into something timeless. Without them, the music stays a demo. With them, it goes platinum.
           </p>
           
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat italic font-medium text-center pt-4">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat text-center pt-4">
             That's how we view founders.
           </p>
           
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-medium leading-relaxed font-montserrat text-center">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat text-center">
             At Founders Row, you're the artist—the obsessed visionary with fire and a story that matters. We're the producer—amplifying your vision, sharpening your playbook, and bringing the right capital and execution to scale your company into something enduring.
           </p>
         </div>
