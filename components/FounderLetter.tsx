@@ -1,8 +1,10 @@
 import Image from 'next/image'
+import BackHome from './BackHome'
 
 const FounderLetter = () => {
   return (
     <section id="about" className="pt-24 sm:pt-32 lg:pt-40 pb-16 sm:pb-20 lg:pb-24 bg-black relative overflow-hidden">
+      <BackHome />
       
       {/* Sophisticated Background Elements */}
       <div className="absolute inset-0">
@@ -23,8 +25,6 @@ const FounderLetter = () => {
         {/* Elegant Header Section */}
         <div className="text-center mb-16 sm:mb-20 lg:mb-24">
           <div className="relative inline-block">
-            {/* Decorative top accent */}
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
             
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-white font-cinzel leading-tight tracking-wide mb-6">
               <div>A Letter from Our Founder,</div>

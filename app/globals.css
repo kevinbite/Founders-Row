@@ -67,6 +67,15 @@
     max-width: 65ch;
   }
   
+  /* Desktop: disable hyphenation for founder letter */
+  @media (min-width: 1024px) {
+    .balanced-text {
+      hyphens: none;
+      word-break: normal;
+      overflow-wrap: normal;
+    }
+  }
+  
   @media (max-width: 768px) {
     .balanced-text {
       max-width: 55ch;
