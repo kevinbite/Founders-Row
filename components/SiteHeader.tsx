@@ -154,6 +154,16 @@ const SiteHeader = () => {
             >
               Contact
             </a>
+
+            {/* Investor Login button for mobile only */}
+            <a
+              href="/investor-login"
+              className="lg:hidden block bg-transparent border-2 border-white/30 text-white text-center px-6 py-3 text-lg font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black"
+              onClick={() => setIsMenuOpen(false)}
+              aria-label="Investor Login"
+            >
+              Investor Login
+            </a>
           </div>
         </div>
       )}

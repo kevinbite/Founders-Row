@@ -137,52 +137,55 @@ const PDFViewer = ({ fileUrl, onClose }: PDFViewerProps) => {
       onContextMenu={handleContextMenu}
     >
       {/* Header with controls */}
-      <div className="bg-neutral-900 border-b border-neutral-700 px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-4">
-          <h2 className="text-white font-cinzel text-xl">Investor Deck</h2>
-          {totalPages > 0 && (
-            <div className="text-white/70 text-sm font-montserrat">
-              Page {currentPage} of {totalPages}
-            </div>
-          )}
-        </div>
+      <div className="bg-neutral-900 border-b border-neutral-700 px-3 sm:px-4 md:px-6 py-3 sm:py-4">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
+          <div className="flex items-center space-x-2 sm:space-x-4 flex-1 min-w-0">
+            <h2 className="text-white font-cinzel text-base sm:text-lg md:text-xl truncate">Investor Deck</h2>
+            {totalPages > 0 && (
+              <div className="text-white/70 text-xs sm:text-sm font-montserrat whitespace-nowrap">
+                Page {currentPage} of {totalPages}
+              </div>
+            )}
+          </div>
 
-        <div className="flex items-center space-x-4">
-          {/* Navigation Controls */}
-          {totalPages > 0 && (
-            <div className="flex items-center space-x-2">
-              <button
-                onClick={goToPrevPage}
-                disabled={currentPage <= 1}
-                className="px-4 py-1.5 bg-neutral-800 text-white rounded hover:bg-neutral-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-montserrat text-sm focus:outline-none focus:ring-2 focus:ring-white/50"
-                aria-label="Previous page"
-              >
-                Previous
-              </button>
-              <button
-                onClick={goToNextPage}
-                disabled={currentPage >= totalPages}
-                className="px-4 py-1.5 bg-neutral-800 text-white rounded hover:bg-neutral-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-montserrat text-sm focus:outline-none focus:ring-2 focus:ring-white/50"
-                aria-label="Next page"
-              >
-                Next
-              </button>
-            </div>
-          )}
+          <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 w-full sm:w-auto">
+            {/* Navigation Controls */}
+            {totalPages > 0 && (
+              <div className="flex items-center space-x-1 sm:space-x-2 flex-1 sm:flex-initial">
+                <button
+                  onClick={goToPrevPage}
+                  disabled={currentPage <= 1}
+                  className="px-2 sm:px-3 md:px-4 py-1.5 bg-neutral-800 text-white rounded hover:bg-neutral-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-montserrat text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-white/50 flex-1 sm:flex-initial"
+                  aria-label="Previous page"
+                >
+                  <span className="hidden sm:inline">Previous</span>
+                  <span className="sm:hidden">Prev</span>
+                </button>
+                <button
+                  onClick={goToNextPage}
+                  disabled={currentPage >= totalPages}
+                  className="px-2 sm:px-3 md:px-4 py-1.5 bg-neutral-800 text-white rounded hover:bg-neutral-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-montserrat text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-white/50 flex-1 sm:flex-initial"
+                  aria-label="Next page"
+                >
+                  Next
+                </button>
+              </div>
+            )}
 
-          {/* Close Button */}
-          <button
-            onClick={onClose}
-            className="px-4 py-1.5 bg-white/10 text-white rounded hover:bg-white/20 transition-colors font-montserrat text-sm focus:outline-none focus:ring-2 focus:ring-white/50"
-            aria-label="Close viewer"
-          >
-            Close
-          </button>
+            {/* Close Button */}
+            <button
+              onClick={onClose}
+              className="px-2 sm:px-3 md:px-4 py-1.5 bg-white/10 text-white rounded hover:bg-white/20 transition-colors font-montserrat text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-white/50 whitespace-nowrap"
+              aria-label="Close viewer"
+            >
+              Close
+            </button>
+          </div>
         </div>
       </div>
 
       {/* PDF Display Area */}
-      <div className="flex-1 overflow-auto bg-neutral-800 flex items-center justify-center p-8">
+      <div className="flex-1 overflow-auto bg-neutral-800 flex items-center justify-center p-2 sm:p-4 md:p-8">
         {isLoading && (
           <div className="text-white font-montserrat text-lg">Loading PDF...</div>
         )}
@@ -205,9 +208,10 @@ const PDFViewer = ({ fileUrl, onClose }: PDFViewerProps) => {
       </div>
 
       {/* Footer hint */}
-      <div className="bg-neutral-900 border-t border-neutral-700 px-6 py-2 text-center">
-        <p className="text-white/50 text-xs font-montserrat">
-          Use arrow keys or buttons to navigate • ESC to close
+      <div className="bg-neutral-900 border-t border-neutral-700 px-3 sm:px-6 py-2 text-center">
+        <p className="text-white/50 text-[10px] sm:text-xs font-montserrat">
+          <span className="hidden sm:inline">Use arrow keys or buttons to navigate • ESC to close</span>
+          <span className="sm:hidden">Swipe or use buttons to navigate</span>
         </p>
       </div>
     </div>
