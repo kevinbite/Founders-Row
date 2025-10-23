@@ -1,0 +1,8 @@
+{
+  "supabase": {
+    "url": "https://qgtmxfvujbyudracvsim.supabase.co",
+    "project_id": "qgtmxfvujbyudracvsim",
+    "service_role_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFndG14ZnZ1amJ5dWRyYWN2c2ltIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MTEzODY3OCwiZXhwIjoyMDc2NzE0Njc4fQ.KIOawXoK3Qnabze9Z6iU3_9d0GLLg7P3KB7_qFRFdSo"
+  }
+}
+

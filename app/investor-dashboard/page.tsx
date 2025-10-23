@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { Newsletter } from '@/lib/supabase'
+import PDFViewer from '@/components/PDFViewer'
 
 export default function InvestorDashboardPage() {
   const router = useRouter()
@@ -12,6 +13,7 @@ export default function InvestorDashboardPage() {
   const [error, setError] = useState('')
   const [userEmail, setUserEmail] = useState('')
   const [selectedNewsletter, setSelectedNewsletter] = useState<Newsletter | null>(null)
+  const [showPDFViewer, setShowPDFViewer] = useState(false)
 
   useEffect(() => {
     checkAuth()
@@ -123,6 +125,44 @@ export default function InvestorDashboardPage() {
 
       {/* Main Content */}
       <main className="relative z-10 max-w-7xl mx-auto px-6 py-12">
+        {/* Investor Decks Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl sm:text-4xl font-light text-white font-cinzel mb-4">
+            Investor Decks
+          </h2>
+          <p className="text-white/70 font-montserrat text-base sm:text-lg mb-6">
+            View our latest investor presentations and portfolio overviews.
+          </p>
+          
+          <div 
+            className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-700 rounded-lg hover:bg-neutral-800/50 transition-all duration-300 overflow-hidden group cursor-pointer"
+            onClick={() => setShowPDFViewer(true)}
+          >
+            <div className="p-8 flex items-center justify-between">
+              <div className="flex items-center gap-6">
+                <div className="bg-white/5 border border-white/20 rounded-lg p-4">
+                  <svg className="w-12 h-12 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-medium text-white font-cinzel mb-2 group-hover:text-white/90 transition-colors">
+                    Founders Row Platform Status & 10‑Year Outlook (October 2025)
+                  </h3>
+                  <p className="text-white/60 font-montserrat">
+                    Click to view the full presentation
+                  </p>
+                </div>
+              </div>
+              <div className="text-white/90 group-hover:text-white transition-colors">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="mb-12">
           <h2 className="text-3xl sm:text-4xl font-light text-white font-cinzel mb-4">
             Quarterly Newsletters
@@ -257,6 +297,14 @@ export default function InvestorDashboardPage() {
             </div>
           </div>
         </div>
+      )}
+
+      {/* PDF Viewer */}
+      {showPDFViewer && (
+        <PDFViewer
+          fileUrl="/investor-decks/Founders Row Platform Status & 10‑Year Outlook (October 2025) (2).pdf"
+          onClose={() => setShowPDFViewer(false)}
+        />
       )}
     </div>
   )
