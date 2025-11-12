@@ -165,10 +165,10 @@ export default function InvestorDashboardPage() {
 
         <div className="mb-12">
           <h2 className="text-3xl sm:text-4xl font-light text-white font-cinzel mb-4">
-            Quarterly Newsletters
+            INSIDE THE ROW
           </h2>
           <p className="text-white/70 font-montserrat text-base sm:text-lg">
-            Stay updated with our latest insights, portfolio updates, and market analysis.
+            Exclusive insights from Jamie Weeks on portfolio updates, market perspectives, and what we're building at Founders Row.
           </p>
         </div>
 
@@ -183,10 +183,10 @@ export default function InvestorDashboardPage() {
         {newsletters.length === 0 ? (
           <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-700 rounded-lg p-12 text-center">
             <p className="text-white/70 font-montserrat text-lg">
-              No newsletters available at this time.
+              No editions available at this time.
             </p>
             <p className="text-white/50 font-montserrat text-sm mt-2">
-              Check back soon for updates.
+              Check back soon for the latest from INSIDE THE ROW.
             </p>
           </div>
         ) : (
@@ -204,7 +204,7 @@ export default function InvestorDashboardPage() {
                         {newsletter.title}
                       </h3>
                       <p className="text-white/60 text-sm font-montserrat">
-                        {newsletter.quarter} {newsletter.year}
+                        {formatDate(newsletter.published_date)}
                       </p>
                     </div>
                   </div>
@@ -256,7 +256,6 @@ export default function InvestorDashboardPage() {
                   {selectedNewsletter.title}
                 </h2>
                 <p className="text-white/60 font-montserrat">
-                  {selectedNewsletter.quarter} {selectedNewsletter.year} •{' '}
                   {formatDate(selectedNewsletter.published_date)}
                 </p>
               </div>
@@ -276,10 +275,74 @@ export default function InvestorDashboardPage() {
             </div>
 
             <div className="p-6 sm:p-8">
-              <div className="prose prose-invert max-w-none">
-                <p className="text-white/90 font-montserrat text-base sm:text-lg leading-relaxed whitespace-pre-wrap">
-                  {selectedNewsletter.content}
-                </p>
+              <div className="max-w-none space-y-10">
+                {selectedNewsletter.content.split('\n\n\n').map((section, idx) => {
+                  const lines = section.trim().split('\n');
+                  const heading = lines[0];
+                  const content = lines.slice(1).join('\n');
+                  
+                  return (
+                    <div key={idx}>
+                      <div className="space-y-4">
+                        {/* Section Heading */}
+                        <h3 className="text-xl sm:text-2xl font-medium text-white font-cinzel leading-tight">
+                          {heading}
+                        </h3>
+                        
+                        {/* Section Content */}
+                        <div className="space-y-4">
+                          {content.split('\n\n').map((paragraph, pIdx) => {
+                            // Check if it's a bullet list
+                            if (paragraph.trim().startsWith('•')) {
+                              // Group lines into bullet items
+                              const lines = paragraph.split('\n');
+                              const bulletItems: string[] = [];
+                              let currentItem = '';
+                              
+                              lines.forEach((line) => {
+                                if (line.trim().startsWith('•')) {
+                                  if (currentItem) {
+                                    bulletItems.push(currentItem);
+                                  }
+                                  currentItem = line.trim().substring(1).trim();
+                                } else if (line.trim()) {
+                                  currentItem += '\n' + line.trim();
+                                }
+                              });
+                              
+                              if (currentItem) {
+                                bulletItems.push(currentItem);
+                              }
+                              
+                              return (
+                                <ul key={pIdx} className="space-y-4 pl-0">
+                                  {bulletItems.map((item, lIdx) => (
+                                    <li key={lIdx} className="text-white/90 font-montserrat text-base sm:text-lg leading-relaxed flex items-start">
+                                      <span className="text-white/60 mr-3 mt-1 flex-shrink-0">•</span>
+                                      <span className="flex-1 whitespace-pre-line">{item}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              );
+                            }
+                            
+                            // Regular paragraph
+                            return paragraph.trim() && (
+                              <p key={pIdx} className="text-white/90 font-montserrat text-base sm:text-lg leading-relaxed">
+                                {paragraph.trim()}
+                              </p>
+                            );
+                          })}
+                        </div>
+                      </div>
+                      
+                      {/* Section Divider (not for last section) */}
+                      {idx < selectedNewsletter.content.split('\n\n\n').length - 1 && (
+                        <div className="mt-8 pt-8 border-t border-white/10" />
+                      )}
+                    </div>
+                  );
+                })}
               </div>
 
               {selectedNewsletter.pdf_url && (

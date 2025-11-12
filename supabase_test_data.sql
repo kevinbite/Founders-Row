@@ -1,4 +1,7 @@
--- Test Data for Investor Portal
+-- DEPRECATED: This file contains OLD test data
+-- Please use: supabase_inside_the_row_vol1.sql instead
+-- 
+-- Test Data for Investor Portal (OLD - DO NOT USE)
 -- Run this in your Supabase SQL Editor to add test data
 
 -- Add a test investor
