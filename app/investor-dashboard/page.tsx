@@ -207,21 +207,21 @@ export default function InvestorDashboardPage() {
           onClick={() => setSelectedNewsletter(null)}
         >
           <div
-            className="bg-neutral-900 border border-neutral-700 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            className="bg-white border border-neutral-200 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="sticky top-0 bg-neutral-900 border-b border-white/10 p-6 flex items-start justify-between">
+            <div className="sticky top-0 bg-white border-b border-neutral-200 p-6 flex items-start justify-between">
               <div>
-                <h2 className="text-2xl sm:text-3xl font-light text-white font-cinzel mb-2">
+                <h2 className="text-2xl sm:text-3xl font-light text-black font-cinzel mb-2">
                   {selectedNewsletter.title}
                 </h2>
-                <p className="text-white/60 font-montserrat">
+                <p className="text-neutral-600 font-montserrat">
                   {formatDate(selectedNewsletter.published_date)}
                 </p>
               </div>
               <button
                 onClick={() => setSelectedNewsletter(null)}
-                className="text-white/70 hover:text-white transition-colors"
+                className="text-neutral-500 hover:text-black transition-colors"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
@@ -245,7 +245,7 @@ export default function InvestorDashboardPage() {
                     <div key={idx}>
                       <div className="space-y-4">
                         {/* Section Heading */}
-                        <h3 className="text-xl sm:text-2xl font-medium text-white font-cinzel leading-tight">
+                        <h3 className="text-xl sm:text-2xl font-medium text-black font-cinzel leading-tight">
                           {heading}
                         </h3>
                         
@@ -277,8 +277,8 @@ export default function InvestorDashboardPage() {
                               return (
                                 <ul key={pIdx} className="space-y-4 pl-0">
                                   {bulletItems.map((item, lIdx) => (
-                                    <li key={lIdx} className="text-white/90 font-montserrat text-base sm:text-lg leading-relaxed flex items-start">
-                                      <span className="text-white/60 mr-3 mt-1 flex-shrink-0">•</span>
+                                    <li key={lIdx} className="text-neutral-800 font-montserrat text-base sm:text-lg leading-relaxed flex items-start">
+                                      <span className="text-neutral-500 mr-3 mt-1 flex-shrink-0">•</span>
                                       <span className="flex-1 whitespace-pre-line">{item}</span>
                                     </li>
                                   ))}
@@ -288,7 +288,7 @@ export default function InvestorDashboardPage() {
                             
                             // Regular paragraph
                             return paragraph.trim() && (
-                              <p key={pIdx} className="text-white/90 font-montserrat text-base sm:text-lg leading-relaxed">
+                              <p key={pIdx} className="text-neutral-800 font-montserrat text-base sm:text-lg leading-relaxed">
                                 {paragraph.trim()}
                               </p>
                             );
@@ -298,7 +298,7 @@ export default function InvestorDashboardPage() {
                       
                       {/* Section Divider (not for last section) */}
                       {idx < selectedNewsletter.content.split('\n\n\n').length - 1 && (
-                        <div className="mt-8 pt-8 border-t border-white/10" />
+                        <div className="mt-8 pt-8 border-t border-neutral-200" />
                       )}
                     </div>
                   );
@@ -306,12 +306,12 @@ export default function InvestorDashboardPage() {
               </div>
 
               {selectedNewsletter.pdf_url && (
-                <div className="mt-8 pt-6 border-t border-white/10">
+                <div className="mt-8 pt-6 border-t border-neutral-200">
                   <a
                     href={selectedNewsletter.pdf_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-white text-black px-6 py-3 text-base font-medium font-cinzel rounded-lg hover:bg-white/90 transition-all duration-200"
+                    className="inline-block bg-black text-white px-6 py-3 text-base font-medium font-cinzel rounded-lg hover:bg-neutral-800 transition-all duration-200"
                   >
                     Download Full PDF
                   </a>
