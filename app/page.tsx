@@ -3,8 +3,7 @@ import HeroSection from '@/components/HeroSection'
 import AboutSection from '@/components/AboutSection'
 import StatementSection from '@/components/StatementSection'
 import WhyWeExist from '@/components/WhyWeExist'
-import Platform from '@/components/Platform'
-import FounderLetterPreview from '@/components/FounderLetterPreview'
+import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -15,8 +14,7 @@ export default function Home() {
       <AboutSection />
       <StatementSection />
       <WhyWeExist />
-      <Platform />
-      <FounderLetterPreview />
+      <ContactSection />
       <Footer />
     </main>
   )

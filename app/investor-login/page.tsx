@@ -73,9 +73,6 @@ export default function InvestorLoginPage() {
           <h1 className="text-3xl sm:text-4xl font-light text-white font-cinzel mb-4">
             Investor Portal
           </h1>
-          <p className="text-white/70 font-montserrat text-sm sm:text-base">
-            Access quarterly newsletters and updates
-          </p>
         </div>
       </div>
 

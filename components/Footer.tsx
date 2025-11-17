@@ -7,13 +7,7 @@ interface FooterProps {
 const Footer = ({ showLogo = true }: FooterProps) => {
   const currentYear = new Date().getFullYear()
 
-  const navItems = [
-    { name: 'Our Mission', href: '/about' },
-    { name: 'Partners', href: '/partners' },
-    { name: 'Advisory', href: '/advisory' },
-    { name: 'Media', href: '/media' },
-    { name: 'Contact', href: '/contact' },
-  ]
+  const navItems: { name: string; href: string }[] = []
 
   return (
     <>
@@ -31,7 +25,7 @@ const Footer = ({ showLogo = true }: FooterProps) => {
           <div 
             className="absolute inset-x-0 top-0 h-32 sm:h-40 md:h-48"
             style={{ 
-              background: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%)'
+              background: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%)'
             }}
           ></div>
           
@@ -39,7 +33,7 @@ const Footer = ({ showLogo = true }: FooterProps) => {
           <div 
             className="absolute inset-x-0 bottom-0 h-32 sm:h-40 md:h-48"
             style={{ 
-              background: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%)'
+              background: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%)'
             }}
           ></div>
           
@@ -47,7 +41,7 @@ const Footer = ({ showLogo = true }: FooterProps) => {
           <div 
             className="absolute inset-y-0 left-0 w-24 sm:w-32 md:w-40 lg:w-48"
             style={{ 
-              background: 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%)'
+              background: 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%)'
             }}
           ></div>
           
@@ -55,13 +49,13 @@ const Footer = ({ showLogo = true }: FooterProps) => {
           <div 
             className="absolute inset-y-0 right-0 w-24 sm:w-32 md:w-40 lg:w-48"
             style={{ 
-              background: 'linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%)'
+              background: 'linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%)'
             }}
           ></div>
         </div>
       </div>
 
-      <footer id="contact" className="bg-black text-white">
+      <footer className="bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-16">
         <div className="flex flex-col items-center justify-center text-center space-y-8">
           {/* Company Info */}
@@ -86,9 +80,9 @@ const Footer = ({ showLogo = true }: FooterProps) => {
           
           {/* Navigation Links */}
           <div className="space-y-6">
-            {/* First row - all nav items except Contact */}
+            {/* First row - nav items */}
             <div className="flex flex-wrap justify-center gap-8">
-              {navItems.slice(0, -1).map((item) => (
+              {navItems.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
@@ -103,7 +97,7 @@ const Footer = ({ showLogo = true }: FooterProps) => {
             {/* Second row - Contact button centered */}
             <div className="flex justify-center">
               <a
-                href="/contact"
+                href="/#contact"
                 className="bg-transparent border-2 border-white/30 text-white px-6 py-2.5 text-base font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
                 aria-label="Contact us"
               >

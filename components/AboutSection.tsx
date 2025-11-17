@@ -16,6 +16,9 @@ const AboutSection = () => {
         {/* About Tile - Matching Platform Styling */}
         <div className="relative">
           <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-700 rounded-lg hover:bg-neutral-800/50 transition-all duration-300 relative overflow-hidden">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent"></div>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+            
             <div className="px-8 md:px-12 lg:px-16 py-12 md:py-16 flex flex-col justify-center text-center">
               <div className="space-y-6 sm:space-y-8">
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">

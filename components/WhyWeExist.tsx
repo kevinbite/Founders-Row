@@ -40,53 +40,6 @@ const WhyWeExist = () => {
           </p>
         </div>
       </div>
-
-      {/* Skyline Reveal Section */}
-      <div className="absolute -bottom-48 sm:-bottom-56 md:-bottom-64 lg:-bottom-72 left-0 right-0 h-64 sm:h-72 md:h-80 lg:h-96 z-50 overflow-hidden">
-        {/* Skyline Image with Gradient Masks */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ 
-            backgroundImage: "url('/images/towering-buildings-in-atlanta-ur1eglcel1q7op52.jpg')",
-            backgroundPosition: 'center 30%'
-          }}
-        >
-          {/* Top fade to black */}
-          <div 
-            className="absolute inset-x-0 top-0 h-32 sm:h-40 md:h-48"
-            style={{ 
-              background: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.3) 100%)'
-            }}
-          ></div>
-          
-          {/* Bottom fade to black */}
-          <div 
-            className="absolute inset-x-0 bottom-0 h-32 sm:h-40 md:h-48"
-            style={{ 
-              background: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.3) 100%)'
-            }}
-          ></div>
-          
-          {/* Left fade */}
-          <div 
-            className="absolute inset-y-0 left-0 w-24 sm:w-32 md:w-40 lg:w-48"
-            style={{ 
-              background: 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.3) 100%)'
-            }}
-          ></div>
-          
-          {/* Right fade */}
-          <div 
-            className="absolute inset-y-0 right-0 w-24 sm:w-32 md:w-40 lg:w-48"
-            style={{ 
-              background: 'linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.3) 100%)'
-            }}
-          ></div>
-          
-          {/* Overall darkening overlay */}
-          <div className="absolute inset-0 bg-black/30"></div>
-        </div>
-      </div>
     </section>
   )
 }
