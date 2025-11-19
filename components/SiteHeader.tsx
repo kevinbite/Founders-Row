@@ -65,15 +65,8 @@ const SiteHeader = () => {
     >
       <nav aria-label="Main" className="max-w-7xl mx-auto px-6 lg:px-8 !bg-transparent">
         <div className="flex justify-end items-center h-20 relative">
-          {/* Desktop - Right-aligned Contact & Investor Login Buttons */}
+          {/* Desktop - Right-aligned Investor Login Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a
-              href="/#contact"
-              className="bg-transparent border-2 border-white/30 text-white px-6 py-2.5 text-base font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
-              aria-label="Contact us"
-            >
-              Contact
-            </a>
             <a
               href="/investor-login"
               className="bg-transparent border-2 border-white/30 text-white px-6 py-2.5 text-base font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
@@ -108,14 +101,6 @@ const SiteHeader = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-b-2 border-white/10 shadow-xl">
             <div className="px-6 py-6 space-y-4">
-              <a
-                href="/#contact"
-                onClick={closeMobileMenu}
-                className="block w-full bg-transparent border-2 border-white/30 text-white px-6 py-3 text-base font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 text-center"
-                aria-label="Contact us"
-              >
-                Contact
-              </a>
               <a
                 href="/investor-login"
                 onClick={closeMobileMenu}

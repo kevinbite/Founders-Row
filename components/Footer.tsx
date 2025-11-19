@@ -1,83 +1,13 @@
-import Image from 'next/image'
-
-interface FooterProps {
-  showLogo?: boolean
-}
-
-const Footer = ({ showLogo = true }: FooterProps) => {
+const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   const navItems: { name: string; href: string }[] = []
 
   return (
     <>
-      {/* Skyline Reveal Section - Above Footer */}
-      <div className="relative h-64 sm:h-72 md:h-80 lg:h-96 overflow-hidden bg-black mt-0">
-        {/* Atlanta Skyline Image with Gradient Masks */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ 
-            backgroundImage: "url('/images/atlanta-skyline-at-dusk.jpg')",
-            backgroundPosition: 'center center'
-          }}
-        >
-          {/* Top fade to black */}
-          <div 
-            className="absolute inset-x-0 top-0 h-32 sm:h-40 md:h-48"
-            style={{ 
-              background: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%)'
-            }}
-          ></div>
-          
-          {/* Bottom fade to black */}
-          <div 
-            className="absolute inset-x-0 bottom-0 h-32 sm:h-40 md:h-48"
-            style={{ 
-              background: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%)'
-            }}
-          ></div>
-          
-          {/* Left fade */}
-          <div 
-            className="absolute inset-y-0 left-0 w-24 sm:w-32 md:w-40 lg:w-48"
-            style={{ 
-              background: 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%)'
-            }}
-          ></div>
-          
-          {/* Right fade */}
-          <div 
-            className="absolute inset-y-0 right-0 w-24 sm:w-32 md:w-40 lg:w-48"
-            style={{ 
-              background: 'linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%)'
-            }}
-          ></div>
-        </div>
-      </div>
-
       <footer className="bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-16">
         <div className="flex flex-col items-center justify-center text-center space-y-8">
-          {/* Company Info */}
-          {showLogo && (
-            <div>
-              <div className="mb-6">
-                <Image
-                  src="/logos/Screenshot 2025-09-07 130347.png"
-                  alt="Founders Row Logo"
-                  width={300}
-                  height={150}
-                  className="max-w-xs w-full h-auto mx-auto"
-                  priority
-                />
-              </div>
-              <div className="text-white text-base sm:text-lg leading-relaxed max-w-2xl font-bold font-montserrat text-center">
-                <div>Capital. Creativity. Execution.</div>
-                <div>100% Founder-Obsessed.</div>
-              </div>
-            </div>
-          )}
-          
           {/* Navigation Links */}
           <div className="space-y-6">
             {/* First row - nav items */}
@@ -92,17 +22,6 @@ const Footer = ({ showLogo = true }: FooterProps) => {
                     {item.name}
                   </a>
               ))}
-            </div>
-            
-            {/* Second row - Contact button centered */}
-            <div className="flex justify-center">
-              <a
-                href="/#contact"
-                className="bg-transparent border-2 border-white/30 text-white px-6 py-2.5 text-base font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
-                aria-label="Contact us"
-              >
-                Contact
-              </a>
             </div>
           </div>
 

@@ -1,120 +1,93 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 
-interface HeroSectionProps {
-  heroImageSrc?: string
-  title?: string
-  subtitle?: string
-  panelTitle?: string
-  panelCol1?: string
-  panelCol2?: string
-}
-
-const HeroSection = ({
-  heroImageSrc = '/images/photo-1634010727710-aeef03fa4cba.jpeg',
-  title = 'Capital. Creativity. Execution.',
-  subtitle = '',
-  panelTitle = 'Founders Row is a next-generation brand builder.',
-  panelCol1 = 'We bring the discipline of private equity, the empathy of founder-led advisory, and the firepower of a world-class creative studio. We exist for one reason: to help founders go further, faster.',
-  panelCol2 = 'We are producers for founders the way Rick Rubin and Jimmy Iovine produced some of the greatest musicians of our time — shaping, amplifying, and pushing them to greatness. (And yes, those guys are our idols.)'
-}: HeroSectionProps) => {
-  const [isVisible, setIsVisible] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-    const checkMobile = () => setIsMobile(window.innerWidth < 768)
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
-
+const HeroSection = () => {
   return (
     <section 
       aria-label="Hero" 
-      className="relative bg-black -mt-20"
-      style={{ 
-        height: isMobile ? '120vh' : '100vh',
-        minHeight: isMobile ? '120vh' : '100vh',
-        overflow: 'hidden'
-      }}
+      className="relative h-screen flex items-center justify-center -mt-20 bg-black"
     >
-      {/* Full-bleed Background Video */}
-      <div className="absolute z-0" style={{ 
-        top: isMobile ? '-80px' : '-80px', 
-        left: '0px', 
-        right: '0px', 
-        bottom: isMobile ? '-10vh' : '0px' 
-      }}>
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          style={{ 
-            width: '100%', 
-            height: isMobile ? 'calc(100% + 80px)' : 'calc(100% + 80px)',
-            objectPosition: isMobile ? 'center 20%' : 'center center'
-          }}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          webkit-playsinline="true"
-          x5-playsinline="true"
-          x5-video-player-type="h5"
-          x5-video-player-fullscreen="false"
-        >
-          <source src="/images/Animated_Video_with_Moving_Sky.mp4" type="video/mp4" />
-          {/* Fallback background image if video fails to load */}
-          <div 
-            className="absolute inset-0 w-full h-full"
-            style={{ 
-              backgroundImage: `url('${heroImageSrc}')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center center',
-              backgroundRepeat: 'no-repeat'
-            }}
-          />
-        </video>
-            {/* Dark overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/80"></div>
-          </div>
+      {/* Flickering white gradient circle that seamlessly fades to black */}
+      <div 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[550px] sm:h-[550px] md:w-[650px] md:h-[650px] rounded-full animate-flicker"
+        style={{
+          background: 'radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(250,250,250,0.95) 10%, rgba(245,245,245,0.88) 15%, rgba(240,240,240,0.82) 20%, rgba(220,220,220,0.68) 30%, rgba(180,180,180,0.48) 40%, rgba(140,140,140,0.32) 50%, rgba(100,100,100,0.18) 60%, rgba(60,60,60,0.09) 70%, rgba(30,30,30,0.04) 80%, rgba(0,0,0,0) 90%)',
+          filter: 'blur(30px)'
+        }}
+      />
 
-          {/* Bottom gradient transition */}
-          <div className="absolute bottom-0 left-0 right-0 h-32 sm:h-40 md:h-48 lg:h-56 bg-gradient-to-b from-transparent to-black z-20"></div>
-
-      {/* Hero Content Stack */}
-      <div className="relative z-10 h-full flex items-start justify-center px-4 sm:px-6 lg:px-8 pt-48 sm:pt-40 md:pt-48 lg:pt-56">
-        <div className="text-center max-w-4xl mx-auto w-full">
-          <div 
-            className={`transition-all duration-700 ease-out ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-            }`}
-          >
-            {/* Main Statement */}
-            <h1 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light text-white leading-relaxed tracking-wide font-montserrat mb-8 sm:mb-10 md:mb-12 mt-6 sm:mt-8 md:mt-10 lg:mt-12">
-              We aren't another private equity firm.<br />
-              <span className="font-medium">We are Founders Row.</span>
-            </h1>
-
-            {/* Logo */}
-            <div className="flex justify-center">
-              <Image
-                src="/logos/Screenshot 2025-09-07 130347.png"
-                alt="Founders Row Logo"
-                width={600}
-                height={150}
-                className="h-24 sm:h-28 md:h-32 lg:h-36 xl:h-40 w-auto"
-                priority
-              />
-            </div>
-
-          </div>
-        </div>
+      {/* Main content - Logo centered and larger */}
+      <div className="relative z-10 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <Image
+          src="/logos/FR LOGO WITH SPADE (1).png"
+          alt="Founders Row Logo"
+          width={1200}
+          height={1200}
+          className="w-full max-w-4xl lg:max-w-5xl h-auto"
+          priority
+        />
       </div>
 
+      <style jsx>{`
+        @keyframes flicker {
+          0%, 100% {
+            opacity: 1;
+          }
+          2% {
+            opacity: 0.92;
+          }
+          4% {
+            opacity: 1;
+          }
+          8% {
+            opacity: 0.88;
+          }
+          12% {
+            opacity: 1;
+          }
+          18% {
+            opacity: 0.95;
+          }
+          20% {
+            opacity: 1;
+          }
+          32% {
+            opacity: 0.9;
+          }
+          34% {
+            opacity: 1;
+          }
+          42% {
+            opacity: 0.93;
+          }
+          44% {
+            opacity: 1;
+          }
+          56% {
+            opacity: 0.91;
+          }
+          58% {
+            opacity: 1;
+          }
+          72% {
+            opacity: 0.94;
+          }
+          74% {
+            opacity: 1;
+          }
+          88% {
+            opacity: 0.89;
+          }
+          92% {
+            opacity: 1;
+          }
+        }
+
+        .animate-flicker {
+          animation: flicker 5s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   )
 }
