@@ -69,8 +69,16 @@ const SiteHeader = () => {
           <div className="hidden md:flex items-center space-x-4">
             <a
               href="/investor-login"
-              className="bg-transparent border-2 border-white/30 text-white px-6 py-2.5 text-base font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
+              className="px-6 py-2.5 text-sm font-medium font-cinzel hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black rounded-md"
               aria-label="Investor Login"
+              style={{
+                background: 'linear-gradient(135deg, #E8E8E8 0%, #FFFFFF 25%, #D1D1D1 50%, #FFFFFF 75%, #E8E8E8 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                textShadow: '0 0 30px rgba(255,255,255,0.5), 0 0 60px rgba(255,255,255,0.3), 0 0 90px rgba(255,255,255,0.2)',
+                filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.4)) drop-shadow(0 0 40px rgba(255,255,255,0.2))'
+              }}
             >
               Investor Login
             </a>
@@ -104,8 +112,16 @@ const SiteHeader = () => {
               <a
                 href="/investor-login"
                 onClick={closeMobileMenu}
-                className="block w-full bg-transparent border-2 border-white/30 text-white px-6 py-3 text-base font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 text-center"
+                className="block w-full px-6 py-3 text-sm font-medium font-cinzel hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 text-center rounded-md"
                 aria-label="Investor Login"
+                style={{
+                  background: 'linear-gradient(135deg, #E8E8E8 0%, #FFFFFF 25%, #D1D1D1 50%, #FFFFFF 75%, #E8E8E8 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  textShadow: '0 0 30px rgba(255,255,255,0.5), 0 0 60px rgba(255,255,255,0.3), 0 0 90px rgba(255,255,255,0.2)',
+                  filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.4)) drop-shadow(0 0 40px rgba(255,255,255,0.2))'
+                }}
               >
                 Investor Login
               </a>

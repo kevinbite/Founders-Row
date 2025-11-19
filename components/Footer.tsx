@@ -59,8 +59,8 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <div className="pt-8 border-t border-white w-full">
-            <p className="text-white text-sm font-montserrat">
+          <div className="w-full">
+            <p className="text-white text-xs font-montserrat">
               © {currentYear} Founders Row. All rights reserved.
             </p>
           </div>

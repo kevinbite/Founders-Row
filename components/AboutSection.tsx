@@ -2,7 +2,7 @@
 
 const AboutSection = () => {
   return (
-    <section className="relative bg-black py-12 sm:py-16 md:py-20 lg:py-24 -mt-32 sm:-mt-40 md:-mt-32 lg:-mt-20 z-40">
+    <section className="relative bg-black pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-4 sm:pb-6 md:pb-8 lg:pb-10 -mt-32 sm:-mt-40 md:-mt-32 lg:-mt-20 z-40">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -71,11 +71,11 @@ const AboutSection = () => {
             }}
           />
           
-          <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-700 rounded-lg hover:bg-neutral-800/50 transition-all duration-300 relative overflow-visible">
+          <div className="relative">
+            {/* Top line where spotlight emanates */}
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent"></div>
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
             
-            {/* Light source glow at top of tile */}
+            {/* Light source glow at top line */}
             <div 
               className="absolute top-0 left-1/2 -translate-x-1/2 w-32 sm:w-48 md:w-64 h-12 sm:h-14 md:h-16 -translate-y-1/2"
               style={{
@@ -84,13 +84,13 @@ const AboutSection = () => {
               }}
             />
             
-            <div className="px-8 md:px-12 lg:px-16 py-12 md:py-16 flex flex-col justify-center text-center">
+            <div className="px-8 md:px-12 lg:px-16 pt-20 md:pt-24 lg:pt-28 pb-12 md:pb-16 flex flex-col justify-center text-center">
               <div className="space-y-6 sm:space-y-8">
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 leading-relaxed font-montserrat">
                   We are a founder-first investment platform based in Atlanta, Georgia, operating at the intersection of capital, creativity, and execution. Our model combines private equity discipline with creative studio agility.
                 </p>
                 
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 leading-relaxed font-montserrat">
                   We believe great founders are business's most powerful force. We exist to sharpen their playbooks, amplify their vision, and build companies that endure.
                 </p>
               </div>

@@ -2,7 +2,6 @@
 
 import { useState, FormEvent } from 'react'
 import { useRouter } from 'next/navigation'
-import Image from 'next/image'
 
 export default function InvestorLoginPage() {
   const router = useRouter()
@@ -59,17 +58,9 @@ export default function InvestorLoginPage() {
         />
       </div>
 
-      {/* Header with logo */}
+      {/* Header */}
       <div className="relative z-10 pt-12 pb-8 px-6">
         <div className="max-w-md mx-auto text-center">
-          <Image
-            src="/logos/Screenshot 2025-09-07 130347.png"
-            alt="Founders Row Logo"
-            width={300}
-            height={75}
-            className="h-16 w-auto mx-auto mb-8"
-            priority
-          />
           <h1 className="text-3xl sm:text-4xl font-light text-white font-cinzel mb-4">
             Investor Portal
           </h1>
