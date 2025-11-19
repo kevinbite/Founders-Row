@@ -168,7 +168,7 @@ const PartnersPage = () => {
         </div>
       </section>
 
-      <Footer showLogo={false} />
+      <Footer />
     </div>
   )
 }

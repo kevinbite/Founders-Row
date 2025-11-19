@@ -243,7 +243,7 @@ const AdvisoryPage = () => {
         </div>
       </section>
 
-      <Footer showLogo={false} />
+      <Footer />
     </div>
   )
 }
