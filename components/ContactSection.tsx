@@ -14,17 +14,12 @@ const ContactSection = () => {
           }}></div>
         </div>
         
-          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="relative inline-block mb-6">
             <h2 
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light font-cinzel leading-tight tracking-wide mb-2"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light font-cinzel leading-tight tracking-wide mb-2 text-white"
               style={{
-                background: 'linear-gradient(135deg, #E8E8E8 0%, #FFFFFF 25%, #D1D1D1 50%, #FFFFFF 75%, #E8E8E8 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                textShadow: '0 0 30px rgba(255,255,255,0.5), 0 0 60px rgba(255,255,255,0.3), 0 0 90px rgba(255,255,255,0.2)',
-                filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.4)) drop-shadow(0 0 40px rgba(255,255,255,0.2))'
+                textShadow: '0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(255,255,255,0.7), 0 0 40px rgba(255,255,255,0.5), 0 0 80px rgba(255,255,255,0.3), 0 0 120px rgba(255,255,255,0.15), 0 0 160px rgba(255,255,255,0.08)'
               }}
             >
               Let's Connect
