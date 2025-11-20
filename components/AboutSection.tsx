@@ -2,7 +2,7 @@
 
 const AboutSection = () => {
   return (
-    <section className="relative bg-black pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-4 sm:pb-6 md:pb-8 lg:pb-10 -mt-32 sm:-mt-40 md:-mt-32 lg:-mt-20 z-40 overflow-visible">
+    <section className="relative bg-black pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-4 sm:pb-6 md:pb-8 lg:pb-10 -mt-16 sm:-mt-40 md:-mt-32 lg:-mt-20 z-40 overflow-visible">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
