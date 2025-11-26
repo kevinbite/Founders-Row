@@ -92,7 +92,7 @@ const AboutSection = () => {
                   </p>
                   
                   <p className="text-xs sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
-                    We're operators and builders who work at the intersection of capital, creativity, and execution. We're one of you - founders - and you deserve a partner who understands what it actually feels like to build something from nothing. So when you're sitting at "their" board table in "their" ivory tower, ask "them" what they've built with their own blood, sweat, and tears - not what they've engineered through models, leverage, or one-sided contracts, you'll be surprised by how little "they" have actually built.
+                    We're operators and builders who work at the intersection of capital, creativity, and execution. We're one of you - founders - and you deserve a partner who understands what it actually feels like to build something from nothing. So when you're sitting at "their" board table in "their" ivory tower, ask "them" what they've built with their own blood, sweat, and tears - not what they've engineered through models, leverage, or one-sided contracts, you'll be surprised by how little "they" have actually&nbsp;built.
                   </p>
                   
                   <p className="text-xs sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
