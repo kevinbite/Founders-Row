@@ -86,13 +86,9 @@ const AboutSection = () => {
             
             <div className="px-8 md:px-12 lg:px-16 pb-12 md:pb-16 text-center">
               <div className="absolute bottom-full left-0 right-0 px-8 md:px-12 lg:px-16 pb-2">
-                <div className="space-y-6 sm:space-y-8">
-                  <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 leading-relaxed font-montserrat">
-                    We are a founder-first investment platform based in Atlanta, Georgia, operating at the intersection of capital, creativity, and execution. Our model combines private equity discipline with creative studio agility.
-                  </p>
-                  
-                  <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 leading-relaxed font-montserrat">
-                    We believe great founders are business's most powerful force. We exist to sharpen their playbooks, amplify their vision, and build companies that endure.
+                <div>
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
+                    We are a founder-first investment platform based in Atlanta, Georgia, operating at the intersection of capital, creativity, and execution. Our model combines private equity discipline with creative studio agility. We believe great founders are business's most powerful force. We exist to sharpen their playbooks, amplify their vision, and build companies that endure.
                   </p>
                 </div>
               </div>
