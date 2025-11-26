@@ -2,7 +2,7 @@
 
 const AboutSection = () => {
   return (
-    <section className="relative bg-black pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-4 sm:pb-6 md:pb-8 lg:pb-10 -mt-16 sm:-mt-40 md:-mt-32 lg:-mt-20 z-40 overflow-visible">
+    <section className="relative bg-black pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-4 sm:pb-6 md:pb-8 lg:pb-10 -mt-8 sm:-mt-40 md:-mt-32 lg:-mt-20 z-40 overflow-visible">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -17,15 +17,15 @@ const AboutSection = () => {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* About Tile - Matching Platform Styling */}
         <div className="relative" style={{ zIndex: 1 }}>
-          {/* Spotlight beam emanating from tile top toward logo - seamless blend */}
+          {/* Spotlight beam emanating from tile top toward logo - seamless blend - extended on mobile */}
           <div 
             className="absolute left-1/2 -translate-x-1/2 pointer-events-none animate-flicker"
             style={{
               bottom: '100%',
               width: 'min(400px, 90vw)',
-              height: '700px',
+              height: '900px',
               background: `
-                radial-gradient(ellipse 200px 700px at 50% 100%, 
+                radial-gradient(ellipse 200px 900px at 50% 100%, 
                   rgba(255,255,255,0.55) 0%, 
                   rgba(250,250,250,0.5) 10%, 
                   rgba(245,245,245,0.45) 15%, 
@@ -87,8 +87,8 @@ const AboutSection = () => {
             <div className="px-8 md:px-12 lg:px-16 pb-12 md:pb-16 text-center">
               <div className="absolute bottom-full left-0 right-0 px-8 md:px-12 lg:px-16 pb-2">
                 <div>
-                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
-                    We are a founder-first investment platform based in Atlanta, Georgia, operating at the intersection of capital, creativity, and execution. Our model combines private equity discipline with creative studio agility. We believe great founders are business's most powerful force. We exist to sharpen their playbooks, amplify their vision, and build companies that endure.
+                  <p className="text-xs sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
+                    We're not spreadsheet CEOs, and we're not here to nod along to people who've never built anything. We're operators and builders who work at the intersection of capital, creativity, and execution. We're one of you - founders - and you deserve a partner who understands what it actually feels like to build something from nothing. So when you're sitting at "their" board table in "their" ivory tower, ask "them" what they've built with their own blood, sweat, and tears - not what they've engineered through models, leverage, or one-sided contracts. We're here for the rebels, the misunderstood, the ones obsessed with a vision others can't yet see. Those are our people. That's our work. That's Founders Row.
                   </p>
                 </div>
               </div>
