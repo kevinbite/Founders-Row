@@ -2,7 +2,7 @@
 
 const AboutSection = () => {
   return (
-    <section className="relative bg-black pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-4 sm:pb-6 md:pb-8 lg:pb-10 -mt-20 sm:-mt-40 md:-mt-32 lg:-mt-20 z-40 overflow-visible">
+    <section className="relative bg-black pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-4 sm:pb-6 md:pb-8 lg:pb-10 -mt-32 sm:-mt-48 md:-mt-40 lg:-mt-28 z-40 overflow-visible">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -88,15 +88,11 @@ const AboutSection = () => {
               <div className="absolute bottom-full left-0 right-0 px-8 md:px-12 lg:px-16 pb-2">
                 <div className="space-y-4">
                   <p className="text-xs sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
-                    We're not spreadsheet CEOs, and we're not here to nod along to people who've never built anything.
+                    We are a team of operators and builders who live at the intersection of capital, creativity, and execution. As founders ourselves, we know what it truly takes to build something from the ground up — and we bring that experience to every&nbsp;partnership.
                   </p>
                   
                   <p className="text-xs sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
-                    We're operators and builders who work at the intersection of capital, creativity, and execution. We're one of you - founders - and you deserve a partner who understands what it actually feels like to build something from nothing. So when you're sitting at "their" board table in "their" ivory tower, ask "them" what they've built with their own blood, sweat, and tears - not what they've engineered through models, leverage, or one-sided contracts, you'll be surprised by how little "they" have actually&nbsp;built.
-                  </p>
-                  
-                  <p className="text-xs sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
-                    We're here for the rebels, the misunderstood, the ones obsessed with a vision others can't yet see. Those are our people. That's our work. That's Founders Row.
+                    At Founders Row, we collaborate with driven entrepreneurs who are deeply committed to their vision. We don't just provide financial support — we contribute hands-on insight, shared experience, and a genuine belief in what you're&nbsp;building.
                   </p>
                 </div>
               </div>
