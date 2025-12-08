@@ -2,7 +2,7 @@
 
 const AboutSection = () => {
   return (
-    <section className="relative bg-black pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-4 sm:pb-6 md:pb-8 lg:pb-10 -mt-32 sm:-mt-48 md:-mt-40 lg:-mt-28 z-40 overflow-visible">
+    <section className="relative bg-black pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-4 sm:pb-6 md:pb-8 lg:pb-10 mt-64 sm:mt-80 md:mt-72 lg:mt-64 z-40 overflow-visible">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -17,15 +17,15 @@ const AboutSection = () => {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* About Tile - Matching Platform Styling */}
         <div className="relative" style={{ zIndex: 1 }}>
-          {/* Spotlight beam emanating from tile top toward logo - seamless blend - extended on mobile */}
+          {/* Spotlight beam emanating from tile top toward logo - extended for more content */}
           <div 
             className="absolute left-1/2 -translate-x-1/2 pointer-events-none animate-flicker"
             style={{
               bottom: '100%',
               width: 'min(400px, 90vw)',
-              height: '900px',
+              height: '1800px',
               background: `
-                radial-gradient(ellipse 200px 900px at 50% 100%, 
+                radial-gradient(ellipse 200px 1800px at 50% 100%, 
                   rgba(255,255,255,0.55) 0%, 
                   rgba(250,250,250,0.5) 10%, 
                   rgba(245,245,245,0.45) 15%, 
@@ -49,9 +49,9 @@ const AboutSection = () => {
             style={{
               bottom: '100%',
               width: 'min(750px, 90vw)',
-              height: 'min(900px, 70vh)',
+              height: '1600px',
               background: `
-                radial-gradient(ellipse 300px 900px at 50% 100%, 
+                radial-gradient(ellipse 300px 1600px at 50% 100%, 
                   rgba(250,250,250,0.5) 0%, 
                   rgba(245,245,245,0.48) 5%, 
                   rgba(240,240,240,0.45) 10%, 
@@ -86,13 +86,33 @@ const AboutSection = () => {
             
             <div className="px-8 md:px-12 lg:px-16 pb-12 md:pb-16 text-center">
               <div className="absolute bottom-full left-0 right-0 px-8 md:px-12 lg:px-16 pb-2">
-                <div className="space-y-4">
+                <div className="space-y-4 sm:space-y-5">
                   <p className="text-xs sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
-                    We are a team of operators and builders who live at the intersection of capital, creativity, and execution. As founders ourselves, we know what it truly takes to build something from the ground up — and we bring that experience to every&nbsp;partnership.
+                    Founders Row exists to help founders build strong, enduring companies. Our platform is simple: we acquire, we build, and we advise founder-led&nbsp;brands.
                   </p>
                   
                   <p className="text-xs sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
-                    At Founders Row, we collaborate with driven entrepreneurs who are deeply committed to their vision. We don't just provide financial support — we contribute hands-on insight, shared experience, and a genuine belief in what you're&nbsp;building.
+                    We acquire established, cash-flowing companies. Each year, we raise private credit to invest alongside founders who have built real, durable businesses. We purchase a meaningful ownership stake, support the next phase of growth, and stay aligned with the founder as the company scales. Our role is to strengthen the company while keeping the founder firmly in the driver's&nbsp;seat.
+                  </p>
+                  
+                  <p className="text-xs sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
+                    We incubate new brands from scratch. For ideas that deserve to exist, we help bring them to life. We shape the concept, build the model, create the brand, and launch the first version of the business. In these incubations, Founders Row acts as a true co-builder—working closely with the founder from day&nbsp;one.
+                  </p>
+                  
+                  <p className="text-xs sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
+                    We advise select founders and receive equity for our involvement. Some founders come to us for strategic support as they scale. In those cases, we take a small equity position in the company in exchange for our advisory role. This gives founders access to operational experience, decision-making support, and a partner who has built and exited businesses&nbsp;before.
+                  </p>
+                  
+                  <p className="text-xs sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
+                    That's the&nbsp;firm:
+                  </p>
+                  
+                  <p className="text-xs sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
+                    We invest in great founders, we help build new brands, and we stand beside leaders who are scaling their&nbsp;companies.
+                  </p>
+                  
+                  <p className="text-xs sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-montserrat">
+                    Simple. Focused.&nbsp;Long-term.
                   </p>
                 </div>
               </div>
