@@ -1,56 +1,58 @@
-# Update Newsletter Instructions - INSIDE THE ROW VOL. 1
+# Update Newsletter Instructions - INSIDE THE ROW
 
-## Step 1: Access Supabase SQL Editor
+## Available Volumes
+
+- **VOL. 1**: `supabase_inside_the_row_vol1.sql`
+- **VOL. 2**: `supabase_inside_the_row_vol2.sql` *(NEW)*
+
+---
+
+## Adding VOL. 2 (Latest)
+
+### Step 1: Access Supabase SQL Editor
 
 1. Go to [https://supabase.com](https://supabase.com) and log into your project
 2. Navigate to the **SQL Editor** in the left sidebar
 3. Click **New Query**
 
-## Step 2: Run the SQL Update
+### Step 2: Run the SQL Update
 
-Copy and paste the following SQL from the file `supabase_inside_the_row_vol1.sql`:
-
-```sql
--- Clear existing test newsletters and add INSIDE THE ROW VOL. 1
--- Run this in your Supabase SQL Editor
-
--- Delete all existing newsletters
-DELETE FROM newsletters;
-
--- Insert INSIDE THE ROW VOL. 1
--- (See the full SQL file for the complete INSERT statement)
-```
-
-Or simply:
-1. Open the file: `supabase_inside_the_row_vol1.sql`
+1. Open the file: `supabase_inside_the_row_vol2.sql`
 2. Copy the entire contents
 3. Paste into Supabase SQL Editor
 4. Click **Run** (or press Cmd/Ctrl + Enter)
 
+**Note:** This will ADD Vol. 2 to your existing newsletters. Both Vol. 1 and Vol. 2 will be visible in the investor portal.
+
+---
+
+## Fresh Install (Both Volumes)
+
+If setting up from scratch, run both SQL files in order:
+1. First run `supabase_inside_the_row_vol1.sql`
+2. Then run `supabase_inside_the_row_vol2.sql`
+
 ## Step 3: Verify the Update
 
 After running the SQL, you should see:
-- **1 row** deleted (or 3 rows if test data was present)
 - **1 row** inserted
-- A result table showing the new newsletter:
+- A result table showing all newsletters:
+  - Title: "INSIDE THE ROW — VOL. 2" (newest)
   - Title: "INSIDE THE ROW — VOL. 1"
-  - Quarter: "VOL. 1"
-  - Year: 2025
-  - Is Published: true
+  - Is Published: true for all
 
 ## Step 4: Test on Investor Dashboard
 
 1. Navigate to: **http://localhost:3000/investor-login**
 2. Log in with your credentials (or test@foundersrow.com / DEMO2025)
 3. You should see:
-   - **Section header**: "INSIDE THE ROW" (not "Quarterly Newsletters")
-   - **One newsletter card**: "INSIDE THE ROW — VOL. 1"
-   - Click the card to open the full newsletter in a modal
+   - **Section header**: "INSIDE THE ROW"
+   - **Newsletter cards**: Both VOL. 1 and VOL. 2 (newest first)
+   - Click a card to open the full newsletter in a modal
    - Content should be beautifully formatted with:
-     - 6 distinct sections
-     - Proper headings for each section
+     - Distinct sections with proper headings
      - Paragraph spacing
-     - Bullet points for The Founders Row Focus section
+     - Bullet points where applicable
      - Section dividers between each part
 
 ## What Changed
