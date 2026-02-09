@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import Image from 'next/image'
 
 const companies = [
@@ -17,41 +17,51 @@ const extendedCompanies = [...companies, ...companies, ...companies]
 export default function PortfolioCarousel() {
   const [scrollPosition, setScrollPosition] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
-  const animationRef = useRef<number>()
+  const animationRef = useRef<number | null>(null)
   const lastTimeRef = useRef<number>(0)
+  const scrollRef = useRef<number>(0)
 
   // Responsive card dimensions
   const cardWidth = isMobile ? 160 : 220
   const cardGap = isMobile ? 16 : 40
   const totalWidth = companies.length * (cardWidth + cardGap)
-  const speed = 0.03 // pixels per millisecond
+  const speed = isMobile ? 0.025 : 0.03 // Slightly slower on mobile for smoothness
 
   // Detect mobile screen
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 640)
+    const checkMobile = () => {
+      const mobile = window.innerWidth < 640
+      setIsMobile(mobile)
+    }
     checkMobile()
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
+  // Animation loop using refs to avoid re-renders on each frame
   useEffect(() => {
+    // Reset animation state when dimensions change
+    lastTimeRef.current = 0
+    scrollRef.current = scrollPosition
+
     const animate = (currentTime: number) => {
       if (lastTimeRef.current === 0) {
         lastTimeRef.current = currentTime
+        animationRef.current = requestAnimationFrame(animate)
+        return
       }
       
-      const deltaTime = currentTime - lastTimeRef.current
+      const deltaTime = Math.min(currentTime - lastTimeRef.current, 50) // Cap delta to prevent jumps
       lastTimeRef.current = currentTime
 
-      setScrollPosition(prev => {
-        let newPos = prev - speed * deltaTime
-        // Reset position when we've scrolled one full set
-        if (newPos <= -totalWidth) {
-          newPos += totalWidth
-        }
-        return newPos
-      })
+      scrollRef.current -= speed * deltaTime
       
+      // Reset position when we've scrolled one full set
+      if (scrollRef.current <= -totalWidth) {
+        scrollRef.current += totalWidth
+      }
+      
+      setScrollPosition(scrollRef.current)
       animationRef.current = requestAnimationFrame(animate)
     }
 
@@ -60,9 +70,10 @@ export default function PortfolioCarousel() {
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
+        animationRef.current = null
       }
     }
-  }, [totalWidth, isMobile])
+  }, [totalWidth, speed])
 
   return (
     <section className="bg-black py-12 sm:py-24 md:py-32 lg:pt-16 overflow-hidden">
@@ -97,8 +108,9 @@ export default function PortfolioCarousel() {
             const baseOffset = index * (cardWidth + cardGap)
             const centerOffset = scrollPosition + baseOffset - (extendedCompanies.length * (cardWidth + cardGap)) / 2 + (cardWidth + cardGap) / 2
             
-            // Only render cards that are reasonably close to viewport
-            if (Math.abs(centerOffset) > 900) return null
+            // Only render cards that are reasonably close to viewport (smaller threshold on mobile)
+            const viewportThreshold = isMobile ? 500 : 900
+            if (Math.abs(centerOffset) > viewportThreshold) return null
 
             // Calculate scale based on distance from center (center = bigger)
             const distanceFromCenter = Math.abs(centerOffset)
@@ -120,16 +132,12 @@ export default function PortfolioCarousel() {
             return (
               <div
                 key={`${company.name}-${index}`}
-                className="absolute transition-transform duration-75 ease-linear"
+                className="absolute"
                 style={{
-                  transform: `
-                    translateX(${centerOffset}px) 
-                    translateY(${yPosition}px)
-                    translateZ(${zPosition}px) 
-                    rotateY(${rotateY}deg)
-                    scale(${scale})
-                  `,
+                  transform: `translate3d(${centerOffset}px, ${yPosition}px, ${zPosition}px) rotateY(${rotateY}deg) scale(${scale})`,
                   zIndex: Math.round((1 - normalizedDistance) * 10),
+                  willChange: 'transform',
+                  backfaceVisibility: 'hidden',
                 }}
               >
                 {/* Glow Card */}
