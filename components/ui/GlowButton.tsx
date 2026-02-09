@@ -9,6 +9,8 @@ interface GlowButtonProps {
   external?: boolean
   onClick?: () => void
   className?: string
+  type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
 }
 
 export default function GlowButton({ 
@@ -16,7 +18,9 @@ export default function GlowButton({
   href, 
   external = false,
   onClick,
-  className = '' 
+  className = '',
+  type = 'button',
+  disabled = false
 }: GlowButtonProps) {
   const buttonContent = (
     <span className="relative z-10 px-8 py-4 block">
@@ -86,7 +90,7 @@ export default function GlowButton({
   }
 
   return (
-    <button onClick={onClick} className={buttonClasses}>
+    <button type={type} onClick={onClick} disabled={disabled} className={`${buttonClasses} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}>
       {glowEffect}
       {buttonContent}
     </button>
