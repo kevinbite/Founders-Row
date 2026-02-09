@@ -251,11 +251,6 @@ export default function PortfolioCarousel() {
                     <h3 className="font-heading text-xs sm:text-lg font-semibold text-center text-black/80 tracking-wide uppercase">
                       {company.name}
                     </h3>
-                    
-                    {/* Category */}
-                    <p className="font-body text-black/50 text-[9px] sm:text-xs mt-1 sm:mt-2 tracking-wider uppercase">
-                      {company.category}
-                    </p>
                   </div>
                 </div>
               </div>

@@ -4,7 +4,7 @@ import AnimateOnScroll from './ui/AnimateOnScroll'
 
 export default function AboutSection() {
   return (
-    <section id="about" className="bg-black -mt-80 pt-0 pb-16 sm:-mt-20 sm:pt-0 sm:pb-24 lg:-mt-16 lg:pt-0 lg:pb-16">
+    <section id="about" className="bg-black -mt-72 pt-0 pb-16 sm:-mt-20 sm:pt-0 sm:pb-24 lg:-mt-16 lg:pt-0 lg:pb-16 relative z-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
         {/* Main statement */}

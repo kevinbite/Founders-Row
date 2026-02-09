@@ -19,10 +19,10 @@ export default function HeroSection() {
         }`}
       >
         <Image
-          src="/images/fr_website_hero_feb_update.jpeg"
+          src="/images/Gemini_Generated_Image_bfe5y9bfe5y9bfe5.jpeg"
           alt="Founders Row"
           fill
-          className="object-contain object-center grayscale scale-[1.15]"
+          className="object-contain object-center grayscale scale-[0.85]"
           priority
           quality={100}
           sizes="100vw"
@@ -37,10 +37,10 @@ export default function HeroSection() {
         />
         {/* Bottom fade for mobile - positioned where image content ends */}
         <div 
-          className="absolute left-0 right-0 h-32 pointer-events-none z-10"
+          className="absolute left-0 right-0 h-48 pointer-events-none z-10"
           style={{
-            top: '70vh',
-            background: 'linear-gradient(to top, black 0%, transparent 100%)',
+            top: '75vh',
+            background: 'linear-gradient(to top, black 0%, black 30%, transparent 100%)',
           }}
         />
       </div>
@@ -52,7 +52,7 @@ export default function HeroSection() {
         }`}
       >
         <Image
-          src="/images/fr_website_hero_feb_update.jpeg"
+          src="/images/Gemini_Generated_Image_m3my8cm3my8cm3my.jpeg"
           alt="Founders Row"
           fill
           className="object-contain object-center grayscale"
