@@ -3,7 +3,10 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Newsletter } from '@/lib/supabase'
+import AnimateOnScroll from '@/components/ui/AnimateOnScroll'
+import Footer from '@/components/Footer'
 
 export default function InvestorDashboardPage() {
   const router = useRouter()
@@ -69,50 +72,39 @@ export default function InvestorDashboardPage() {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-white/90 font-montserrat text-lg">Loading...</div>
+        <div className="text-white/60 text-lg">Loading...</div>
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-black">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.05) 1px, transparent 1px),
-                             radial-gradient(circle at 75% 75%, rgba(255,255,255,0.03) 1px, transparent 1px)`,
-            backgroundSize: '50px 50px, 80px 80px',
-            backgroundPosition: '0 0, 25px 25px',
-          }}
-        />
-      </div>
-
+    <main className="min-h-screen bg-black">
       {/* Header */}
-      <header className="relative z-10 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
-          <div className="flex items-center justify-between gap-2 sm:gap-4">
-            <div className="flex items-center gap-3 sm:gap-6 flex-1 min-w-0">
-              <Image
-                src="/logos/Screenshot 2025-09-07 130347.png"
-                alt="Founders Row Logo"
-                width={200}
-                height={50}
-                className="h-8 sm:h-10 md:h-12 w-auto flex-shrink-0"
-                priority
-              />
-              <h1 className="text-base sm:text-xl md:text-2xl font-light text-white font-cinzel hidden xs:block truncate">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-6">
+              <Link href="/">
+                <Image
+                  src="/logos/Screenshot 2025-09-07 130347.png"
+                  alt="Founders Row Logo"
+                  width={200}
+                  height={50}
+                  className="h-8 sm:h-10 w-auto"
+                  priority
+                />
+              </Link>
+              <span className="hidden sm:block text-white/30 text-xs tracking-widest uppercase">
                 Investor Portal
-              </h1>
+              </span>
             </div>
-            <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
-              <span className="text-white/70 text-xs sm:text-sm font-montserrat hidden md:block truncate max-w-[150px] lg:max-w-none">
+            <div className="flex items-center gap-4">
+              <span className="text-white/50 text-xs hidden md:block">
                 {userEmail}
               </span>
               <button
                 onClick={handleLogout}
-                className="bg-transparent border border-white/30 text-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 whitespace-nowrap"
+                className="text-[11px] tracking-[0.2em] uppercase text-white/50 hover:text-white transition-colors"
               >
                 Logout
               </button>
@@ -122,112 +114,155 @@ export default function InvestorDashboardPage() {
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        <div className="mb-12">
-          <h2 className="text-3xl sm:text-4xl font-light text-white font-cinzel mb-4">
-            INSIDE THE ROW
-          </h2>
-          <p className="text-white/70 font-montserrat text-base sm:text-lg">
-            Exclusive insights from Jamie Weeks on portfolio updates, market perspectives, and what we're building at Founders Row.
-          </p>
+      <section className="pt-32 pb-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <AnimateOnScroll animation="fadeInUp">
+            <p className="text-white/40 text-xs tracking-widest uppercase mb-3">Newsletter</p>
+            <h1 
+              className="text-4xl sm:text-5xl font-bold mb-6 bg-clip-text text-transparent"
+              style={{
+                backgroundImage: `
+                  linear-gradient(
+                    180deg,
+                    #888888 0%,
+                    #c0c0c0 15%,
+                    #ffffff 30%,
+                    #e0e0e0 45%,
+                    #909090 55%,
+                    #e0e0e0 65%,
+                    #ffffff 80%,
+                    #c0c0c0 90%,
+                    #888888 100%
+                  )
+                `,
+                backgroundSize: '100% 200%',
+                backgroundPosition: 'center',
+              }}
+            >Inside the Row</h1>
+            <p className="text-white/50 text-base sm:text-lg max-w-2xl">
+              Exclusive insights from Jamie Weeks on portfolio updates, market perspectives, and what we&apos;re building at Founders Row.
+            </p>
+          </AnimateOnScroll>
         </div>
+      </section>
 
-        {/* Error Message */}
-        {error && (
-          <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-6 mb-8">
-            <p className="text-red-400 font-montserrat">{error}</p>
-          </div>
-        )}
+      <section className="pb-32">
+        <div className="max-w-5xl mx-auto px-6">
+          {/* Error Message */}
+          {error && (
+            <AnimateOnScroll animation="fadeInUp">
+              <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-6 mb-8">
+                <p className="text-red-400">{error}</p>
+              </div>
+            </AnimateOnScroll>
+          )}
 
-        {/* Newsletters Grid */}
-        {newsletters.length === 0 ? (
-          <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-700 rounded-lg p-12 text-center">
-            <p className="text-white/70 font-montserrat text-lg">
-              No editions available at this time.
-            </p>
-            <p className="text-white/50 font-montserrat text-sm mt-2">
-              Check back soon for the latest from INSIDE THE ROW.
-            </p>
-          </div>
-        ) : (
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {newsletters.map((newsletter) => (
-              <div
-                key={newsletter.id}
-                className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-700 rounded-lg hover:bg-neutral-800/50 transition-all duration-300 overflow-hidden group cursor-pointer"
-                onClick={() => setSelectedNewsletter(newsletter)}
-              >
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-4">
+          {/* Newsletters Grid */}
+          {newsletters.length === 0 ? (
+            <AnimateOnScroll animation="fadeInUp">
+              <div className="fr-card p-12 text-center">
+                <p className="text-white/60 text-lg">
+                  No editions available at this time.
+                </p>
+                <p className="text-white/40 text-sm mt-2">
+                  Check back soon for the latest from Inside the Row.
+                </p>
+              </div>
+            </AnimateOnScroll>
+          ) : (
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {newsletters.map((newsletter, i) => (
+                <AnimateOnScroll key={newsletter.id} animation="fadeInUp" delay={i * 50}>
+                  <div
+                    className="fr-card p-6 h-full flex flex-col cursor-pointer hover:bg-white/[0.03] transition-colors"
+                    onClick={() => setSelectedNewsletter(newsletter)}
+                  >
                     <div className="flex-1">
-                      <h3 className="text-xl font-medium text-white font-cinzel mb-2 group-hover:text-white/90 transition-colors">
-                        {newsletter.title}
-                      </h3>
-                      <p className="text-white/60 text-sm font-montserrat">
+                      <p className="text-white/30 text-xs tracking-widest uppercase mb-3">
                         {formatDate(newsletter.published_date)}
                       </p>
+                      <h3 className="text-white text-lg font-medium mb-3">
+                        {newsletter.title}
+                      </h3>
+                      <p className="text-white/50 text-sm line-clamp-3">
+                        {newsletter.content.substring(0, 150)}...
+                      </p>
+                    </div>
+
+                    <div className="flex items-center justify-between pt-4 mt-4 border-t border-white/5">
+                      <span className="text-white/60 hover:text-white text-sm transition-colors">
+                        Read More →
+                      </span>
+                      {newsletter.pdf_url && (
+                        <a
+                          href={newsletter.pdf_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-white/40 hover:text-white text-xs transition-colors"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          PDF ↓
+                        </a>
+                      )}
                     </div>
                   </div>
+                </AnimateOnScroll>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
 
-                  <p className="text-white/70 font-montserrat text-sm mb-4 line-clamp-3">
-                    {newsletter.content.substring(0, 150)}...
-                  </p>
-
-                  <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                    <span className="text-white/50 text-xs font-montserrat">
-                      {formatDate(newsletter.published_date)}
-                    </span>
-                    <button className="text-white/90 hover:text-white text-sm font-cinzel transition-colors">
-                      Read More →
-                    </button>
-                  </div>
-
-                  {newsletter.pdf_url && (
-                    <a
-                      href={newsletter.pdf_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 block text-center bg-white/5 border border-white/20 text-white px-4 py-2 text-sm font-medium font-cinzel rounded-lg hover:bg-white/10 hover:border-white/30 transition-all duration-200"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      Download PDF
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </main>
+      <Footer />
 
       {/* Newsletter Modal */}
       {selectedNewsletter && (
         <div
-          className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-6"
+          className="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-center justify-center p-6"
           onClick={() => setSelectedNewsletter(null)}
         >
           <div
-            className="bg-neutral-900 border border-neutral-700 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            className="bg-black border border-white/10 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="sticky top-0 bg-neutral-900 border-b border-white/10 p-6 flex items-start justify-between">
+            <div className="sticky top-0 bg-black border-b border-white/5 p-6 flex items-start justify-between">
               <div>
-                <h2 className="text-2xl sm:text-3xl font-light text-white font-cinzel mb-2">
-                  {selectedNewsletter.title}
-                </h2>
-                <p className="text-white/60 font-montserrat">
+                <p className="text-white/40 text-xs tracking-widest uppercase mb-2">
                   {formatDate(selectedNewsletter.published_date)}
                 </p>
+                <h2 
+                  className="text-2xl sm:text-3xl font-bold bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage: `
+                      linear-gradient(
+                        180deg,
+                        #888888 0%,
+                        #c0c0c0 15%,
+                        #ffffff 30%,
+                        #e0e0e0 45%,
+                        #909090 55%,
+                        #e0e0e0 65%,
+                        #ffffff 80%,
+                        #c0c0c0 90%,
+                        #888888 100%
+                      )
+                    `,
+                    backgroundSize: '100% 200%',
+                    backgroundPosition: 'center',
+                  }}
+                >
+                  {selectedNewsletter.title}
+                </h2>
               </div>
               <button
                 onClick={() => setSelectedNewsletter(null)}
-                className="text-white/70 hover:text-white transition-colors"
+                className="text-white/40 hover:text-white transition-colors"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={2}
+                    strokeWidth={1.5}
                     d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
@@ -245,7 +280,7 @@ export default function InvestorDashboardPage() {
                     <div key={idx}>
                       <div className="space-y-4">
                         {/* Section Heading */}
-                        <h3 className="text-xl sm:text-2xl font-medium text-white font-cinzel leading-tight">
+                        <h3 className="text-xl sm:text-2xl font-medium text-white leading-tight">
                           {heading}
                         </h3>
                         
@@ -277,8 +312,8 @@ export default function InvestorDashboardPage() {
                               return (
                                 <ul key={pIdx} className="space-y-4 pl-0">
                                   {bulletItems.map((item, lIdx) => (
-                                    <li key={lIdx} className="text-white/90 font-montserrat text-base sm:text-lg leading-relaxed flex items-start">
-                                      <span className="text-white/60 mr-3 mt-1 flex-shrink-0">•</span>
+                                    <li key={lIdx} className="text-white/70 text-base sm:text-lg leading-relaxed flex items-start">
+                                      <span className="text-white/40 mr-3 mt-1 flex-shrink-0">•</span>
                                       <span className="flex-1 whitespace-pre-line">{item}</span>
                                     </li>
                                   ))}
@@ -288,7 +323,7 @@ export default function InvestorDashboardPage() {
                             
                             // Regular paragraph
                             return paragraph.trim() && (
-                              <p key={pIdx} className="text-white/90 font-montserrat text-base sm:text-lg leading-relaxed">
+                              <p key={pIdx} className="text-white/70 text-base sm:text-lg leading-relaxed">
                                 {paragraph.trim()}
                               </p>
                             );
@@ -298,7 +333,7 @@ export default function InvestorDashboardPage() {
                       
                       {/* Section Divider (not for last section) */}
                       {idx < selectedNewsletter.content.split('\n\n\n').length - 1 && (
-                        <div className="mt-8 pt-8 border-t border-white/10" />
+                        <div className="mt-8 pt-8 border-t border-white/5" />
                       )}
                     </div>
                   );
@@ -306,14 +341,17 @@ export default function InvestorDashboardPage() {
               </div>
 
               {selectedNewsletter.pdf_url && (
-                <div className="mt-8 pt-6 border-t border-white/10">
+                <div className="mt-8 pt-6 border-t border-white/5">
                   <a
                     href={selectedNewsletter.pdf_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-white text-black px-6 py-3 text-base font-medium font-cinzel rounded-lg hover:bg-white/90 transition-all duration-200"
+                    className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm transition-colors"
                   >
                     Download Full PDF
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
                   </a>
                 </div>
               )}
@@ -321,7 +359,7 @@ export default function InvestorDashboardPage() {
           </div>
         </div>
       )}
-    </div>
+    </main>
   )
 }
 

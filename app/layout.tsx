@@ -1,12 +1,19 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Inter, Cinzel, Montserrat } from 'next/font/google'
+import { Cinzel, Lato } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const cinzel = Cinzel({ subsets: ['latin'], variable: '--font-cinzel' })
-const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
+const cinzel = Cinzel({ 
+  subsets: ['latin'], 
+  variable: '--font-cinzel',
+  weight: ['400', '600', '700', '900']
+})
+const lato = Lato({ 
+  subsets: ['latin'], 
+  variable: '--font-lato',
+  weight: ['300', '400', '700']
+})
 
 export const metadata: Metadata = {
   title: 'Founders Row',
@@ -24,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-black overflow-x-hidden">
-      <body className={`${inter.variable} ${cinzel.variable} ${montserrat.variable} antialiased bg-black overflow-x-hidden`}>
+      <body className={`${cinzel.variable} ${lato.variable} antialiased bg-black overflow-x-hidden`}>
         {children}
         <Analytics />
         <SpeedInsights />

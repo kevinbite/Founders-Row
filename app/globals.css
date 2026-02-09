@@ -2,136 +2,147 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lato:wght@300;400;700&display=swap');
+
+/* CSS Variables */
+:root {
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Lato', sans-serif;
+}
+
+/* Clean Animation Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
 
 @layer base {
   html {
     scroll-behavior: smooth;
     background-color: #000000;
-    margin: 0;
-    padding: 0;
   }
   
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-lato), 'Lato', sans-serif;
     background-color: #000000;
-    margin: 0;
-    padding: 0;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  /* Heading styles with Cinzel */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-cinzel), 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  ::selection {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
   }
 }
 
 @layer components {
-  .btn-primary {
-    @apply bg-white hover:bg-gray-100 text-black font-medium py-3 px-6 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-black;
+  /* Metallic heading style */
+  .metallic-text {
+    font-family: var(--font-cinzel), 'Cinzel', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: linear-gradient(
+      180deg,
+      #888888 0%,
+      #c0c0c0 15%,
+      #ffffff 30%,
+      #e0e0e0 45%,
+      #909090 55%,
+      #e0e0e0 65%,
+      #ffffff 80%,
+      #c0c0c0 90%,
+      #888888 100%
+    );
+    background-size: 100% 200%;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 
+      0 1px 0 rgba(255, 255, 255, 0.1),
+      0 2px 4px rgba(0, 0, 0, 0.3);
   }
-  
-  .btn-secondary {
-    @apply bg-transparent hover:bg-gray-800 text-white font-medium py-3 px-6 border-2 border-white rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-black;
+
+  /* Clean card style */
+  .fr-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
-  .signature-white {
-    filter: grayscale(100%) contrast(100%) brightness(0) invert(1);
-    background-color: transparent;
+
+  .fr-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
   }
-  
-  /* Prevent orphaned words and improve text flow on mobile */
-  .optimized-text {
-    orphans: 3;
-    widows: 3;
-    hyphens: auto;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    text-wrap: balance;
-    word-break: normal;
+
+  /* Button styles */
+  .fr-btn-primary {
+    font-family: var(--font-lato), 'Lato', sans-serif;
+    background: #ffffff;
+    color: #000000;
+    padding: 12px 28px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    border-radius: 6px;
+    transition: all 0.3s ease;
   }
-  
-  @media (max-width: 640px) {
-    .optimized-text {
-      text-align: left;
-      word-spacing: normal;
-      letter-spacing: normal;
-      line-height: 1.6;
-      hyphens: auto;
-      word-break: keep-all;
-    }
+
+  .fr-btn-primary:hover {
+    background: rgba(255, 255, 255, 0.9);
   }
-  
-  /* Enhanced text balancing for better readability */
-  .balanced-text {
-    text-wrap: balance;
-    orphans: 4;
-    widows: 4;
-    hyphens: auto;
-    word-spacing: 0.05em;
-    line-height: 1.7;
-    max-width: 65ch;
+
+  .fr-btn-outline {
+    font-family: var(--font-lato), 'Lato', sans-serif;
+    background: transparent;
+    color: #ffffff;
+    padding: 12px 28px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    transition: all 0.3s ease;
   }
-  
-  /* Desktop: disable hyphenation for founder letter */
-  @media (min-width: 1024px) {
-    .balanced-text {
-      hyphens: none;
-      word-break: normal;
-      overflow-wrap: normal;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .balanced-text {
-      max-width: 55ch;
-      line-height: 1.6;
-      word-spacing: normal;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .balanced-text {
-      max-width: 45ch;
-      line-height: 1.5;
-      hyphens: manual;
-    }
-  }
-  
-  /* Platform tile text optimization */
-  .platform-text {
-    text-wrap: balance;
-    text-align: center;
-    orphans: 3;
-    widows: 3;
-    hyphens: none;
-    word-break: normal;
-    overflow-wrap: break-word;
-    word-spacing: normal;
-    letter-spacing: normal;
-    line-height: 1.65;
-    max-width: 52ch;
-    margin: 0 auto;
-  }
-  
-  @media (max-width: 1024px) {
-    .platform-text {
-      max-width: 48ch;
-      line-height: 1.6;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .platform-text {
-      max-width: 42ch;
-      line-height: 1.6;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .platform-text {
-      max-width: 38ch;
-      line-height: 1.55;
-      hyphens: none;
-    }
-  }
-  
-  /* Radial gradient utility for sophisticated backgrounds */
-  .bg-gradient-radial {
-    background-image: radial-gradient(circle, var(--tw-gradient-stops));
+
+  .fr-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
   }
 }
+
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.2s; }
+.stagger-5 { animation-delay: 0.25s; }
+.stagger-6 { animation-delay: 0.3s; }

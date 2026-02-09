@@ -2,6 +2,10 @@
 
 import { useState, FormEvent } from 'react'
 import { useRouter } from 'next/navigation'
+import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
+import AnimateOnScroll from '@/components/ui/AnimateOnScroll'
+import GlowButton from '@/components/ui/GlowButton'
 
 export default function InvestorLoginPage() {
   const router = useRouter()
@@ -44,133 +48,120 @@ export default function InvestorLoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black flex flex-col">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.05) 1px, transparent 1px),
-                             radial-gradient(circle at 75% 75%, rgba(255,255,255,0.03) 1px, transparent 1px)`,
-            backgroundSize: '50px 50px, 80px 80px',
-            backgroundPosition: '0 0, 25px 25px',
-          }}
-        />
-      </div>
+    <main className="min-h-screen bg-black">
+      <Navigation />
 
-      {/* Header */}
-      <div className="relative z-10 pt-12 pb-8 px-6">
-        <div className="max-w-md mx-auto text-center">
-          <h1 className="text-3xl sm:text-4xl font-light text-white font-cinzel mb-4">
-            Investor Portal
-          </h1>
-        </div>
-      </div>
-
-      {/* Login Form */}
-      <div className="relative z-10 flex-1 flex items-center justify-center px-6 pb-20">
-        <div className="w-full max-w-md">
-          <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-700 rounded-lg p-8 sm:p-10">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Email Input */}
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-white/90 font-montserrat mb-2"
-                >
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all duration-200 font-montserrat"
-                  placeholder="investor@example.com"
-                  disabled={isLoading}
-                />
-              </div>
-
-              {/* Access Code Input */}
-              <div>
-                <label
-                  htmlFor="accessCode"
-                  className="block text-sm font-medium text-white/90 font-montserrat mb-2"
-                >
-                  Access Code
-                </label>
-                <input
-                  type="password"
-                  id="accessCode"
-                  value={accessCode}
-                  onChange={(e) => setAccessCode(e.target.value)}
-                  required
-                  className="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all duration-200 font-montserrat"
-                  placeholder="Enter your access code"
-                  disabled={isLoading}
-                />
-              </div>
-
-              {/* Error Message */}
-              {error && (
-                <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4">
-                  <p className="text-red-400 text-sm font-montserrat text-center">
-                    {error}
-                  </p>
-                </div>
-              )}
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                disabled={isLoading}
-                className="w-full bg-white text-black px-6 py-3 text-base font-medium font-cinzel rounded-lg hover:bg-white/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isLoading ? 'Authenticating...' : 'Access Portal'}
-              </button>
-            </form>
-
-            {/* Help Text */}
-            <div className="mt-6 pt-6 border-t border-white/10">
-              <p className="text-white/60 text-xs sm:text-sm font-montserrat text-center">
-                If you need assistance accessing your account, please contact{' '}
-                <a
-                  href="/contact"
-                  className="text-white/90 hover:text-white underline transition-colors duration-200"
-                >
-                  our team
-                </a>
-                .
-              </p>
+      <section className="pt-28 sm:pt-32 pb-16 sm:pb-20">
+        <div className="max-w-md mx-auto px-4 sm:px-6">
+          <AnimateOnScroll animation="fadeInUp">
+            <div className="text-center mb-8 sm:mb-10">
+              <p className="text-white/40 text-xs tracking-widest uppercase mb-2 sm:mb-3">Investors</p>
+              <h1 
+                className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent"
+                style={{
+                  backgroundImage: `
+                    linear-gradient(
+                      180deg,
+                      #888888 0%,
+                      #c0c0c0 15%,
+                      #ffffff 30%,
+                      #e0e0e0 45%,
+                      #909090 55%,
+                      #e0e0e0 65%,
+                      #ffffff 80%,
+                      #c0c0c0 90%,
+                      #888888 100%
+                    )
+                  `,
+                  backgroundSize: '100% 200%',
+                  backgroundPosition: 'center',
+                }}
+              >Investor Portal</h1>
             </div>
-          </div>
+          </AnimateOnScroll>
 
-          {/* Back to Home */}
-          <div className="mt-8 text-center">
-            <a
-              href="/"
-              className="text-white/70 hover:text-white text-sm font-montserrat transition-colors duration-200 inline-flex items-center gap-2"
-            >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                />
-              </svg>
-              Back to Home
-            </a>
-          </div>
+          <AnimateOnScroll animation="fadeInUp" delay={100}>
+            <div className="fr-card p-6 sm:p-8 md:p-10">
+              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+                {/* Email Input */}
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-white/70 mb-2"
+                  >
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-white/30 focus:outline-none focus:ring-1 focus:ring-white/30 focus:border-white/30 transition-all duration-200"
+                    placeholder="investor@example.com"
+                    disabled={isLoading}
+                  />
+                </div>
+
+                {/* Access Code Input */}
+                <div>
+                  <label
+                    htmlFor="accessCode"
+                    className="block text-sm font-medium text-white/70 mb-2"
+                  >
+                    Access Code
+                  </label>
+                  <input
+                    type="password"
+                    id="accessCode"
+                    value={accessCode}
+                    onChange={(e) => setAccessCode(e.target.value)}
+                    required
+                    className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-white/30 focus:outline-none focus:ring-1 focus:ring-white/30 focus:border-white/30 transition-all duration-200"
+                    placeholder="Enter your access code"
+                    disabled={isLoading}
+                  />
+                </div>
+
+                {/* Error Message */}
+                {error && (
+                  <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4">
+                    <p className="text-red-400 text-sm text-center">
+                      {error}
+                    </p>
+                  </div>
+                )}
+
+                {/* Submit Button */}
+                <GlowButton
+                  type="submit"
+                  disabled={isLoading}
+                  className="w-full justify-center"
+                >
+                  {isLoading ? 'Authenticating...' : 'Access Portal'}
+                </GlowButton>
+              </form>
+
+              {/* Help Text */}
+              <div className="mt-6 pt-6 border-t border-white/5">
+                <p className="text-white/40 text-xs sm:text-sm text-center text-balance">
+                  If you need assistance accessing your account, please contact{' '}
+                  <a
+                    href="/contact"
+                    className="text-white/60 hover:text-white underline transition-colors duration-200"
+                  >
+                    our team
+                  </a>
+                  .
+                </p>
+              </div>
+            </div>
+          </AnimateOnScroll>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <Footer />
+    </main>
   )
 }
 

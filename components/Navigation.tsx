@@ -1,135 +1,124 @@
 'use client'
 
-import { useState } from 'react'
-import Image from 'next/image'
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
-const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+const navItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Team', href: '/team' },
+  { name: 'Portfolio', href: '/portfolio' },
+  { name: 'Press', href: '/press' },
+  { name: 'Contact', href: '/contact' },
+]
 
-  const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+export default function Navigation() {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault()
-      handleMenuToggle()
-    }
-  }
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
-  const navItems = [
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/#contact' },
-  ]
+  useEffect(() => {
+    setIsMobileMenuOpen(false)
+  }, [pathname])
+
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [isMobileMenuOpen])
+
+  const isActive = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href)
 
   return (
-    <nav className="bg-transparent backdrop-blur-sm fixed w-full top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <a 
-              href="/" 
-              className="focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-transparent rounded-md"
-              aria-label="Founders Row Home"
-            >
-              <Image
-                src="/logos/Screenshot 2025-09-07 130341.png?v=2"
-                alt="Founders Row Logo"
-                width={200}
-                height={50}
-                className="h-10 w-auto"
-                priority
-              />
-            </a>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+    <>
+      <header
+        className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+          isScrolled ? 'bg-black/95 backdrop-blur-sm' : 'bg-transparent'
+        }`}
+      >
+        <nav className="max-w-6xl mx-auto px-6">
+          <div className="flex items-center justify-between h-20">
+            {/* Desktop Nav - Left aligned */}
+            <div className="hidden lg:flex items-center gap-8">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium font-cinzel transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-black"
-                  aria-label={`Navigate to ${item.name}`}
+                  className={`font-body text-[11px] tracking-[0.2em] uppercase transition-colors ${
+                    isActive(item.href) 
+                      ? 'text-white' 
+                      : 'text-white/50 hover:text-white'
+                  }`}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
-          </div>
 
+            {/* Mobile - Empty spacer for left side */}
+            <div className="lg:hidden" />
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={handleMenuToggle}
-              onKeyDown={handleKeyDown}
-              className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-black"
-              aria-expanded={isMenuOpen}
-              aria-label="Main menu"
-              tabIndex={0}
+            {/* Investor Login - Right aligned */}
+            <Link
+              href="/investor-login"
+              className="hidden lg:block font-body text-[11px] tracking-[0.2em] uppercase text-white/50 hover:text-white transition-colors"
             >
-              <span className="sr-only">Open main menu</span>
-              {!isMenuOpen ? (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              )}
+              Investor Login
+            </Link>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden relative z-10 p-2"
+              aria-label="Menu"
+            >
+              <div className="w-5 h-4 flex flex-col justify-between">
+                <span className={`w-full h-px bg-white transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
+                <span className={`w-full h-px bg-white transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
+                <span className={`w-full h-px bg-white transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
+              </div>
             </button>
+          </div>
+        </nav>
+      </header>
+
+      {/* Mobile Menu */}
+      <div
+        className={`lg:hidden fixed inset-0 z-40 bg-black transition-opacity duration-300 ${
+          isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className="h-full flex flex-col items-center justify-center gap-8">
+          {navItems.map((item, i) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className={`font-body text-sm tracking-[0.3em] uppercase transition-all duration-300 ${
+                isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+              } ${isActive(item.href) ? 'text-white' : 'text-white/50'}`}
+              style={{ transitionDelay: `${i * 50}ms` }}
+            >
+              {item.name}
+            </Link>
+          ))}
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <Link
+              href="/investor-login"
+              className={`font-body text-xs tracking-[0.2em] uppercase text-white/50 hover:text-white transition-all duration-300 ${
+                isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+              }`}
+              style={{ transitionDelay: `${navItems.length * 50}ms` }}
+            >
+              Investor Login
+            </Link>
           </div>
         </div>
       </div>
-
-      {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="md:hidden">
-                  <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/90 backdrop-blur-sm border-t border-gray-800">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium font-cinzel transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-black"
-                onClick={() => setIsMenuOpen(false)}
-                aria-label={`Navigate to ${item.name}`}
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
-    </nav>
+    </>
   )
 }
-
-export default Navigation
